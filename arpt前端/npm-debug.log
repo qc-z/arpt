@@ -1,0 +1,386 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save-dev',
+1 verbose cli   'eslint-config-airbnb',
+1 verbose cli   'eslint@^#.#.#',
+1 verbose cli   'eslint-plugin-jsx-a11y@^#.#.#',
+1 verbose cli   'eslint-plugin-import@^#.#.#',
+1 verbose cli   'eslint-plugin-react@^#.#.#' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.3
+4 verbose config Skipping project config: /Users/wonderchief/.npmrc. (matches userconfig)
+5 silly loadCurrentTree Starting
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 silly fetchPackageMetaData eslint-config-airbnb
+9 silly fetchPackageMetaData eslint@^#.#.#
+10 silly fetchPackageMetaData eslint-plugin-jsx-a11y@^#.#.#
+11 silly fetchPackageMetaData eslint-plugin-import@^#.#.#
+12 silly fetchPackageMetaData eslint-plugin-react@^#.#.#
+13 silly fetchNamedPackageData eslint-config-airbnb
+14 silly mapToRegistry name eslint-config-airbnb
+15 silly mapToRegistry using default registry
+16 silly mapToRegistry registry https://registry.npm.taobao.org/
+17 silly mapToRegistry data Result {
+17 silly mapToRegistry   raw: 'eslint-config-airbnb',
+17 silly mapToRegistry   scope: null,
+17 silly mapToRegistry   escapedName: 'eslint-config-airbnb',
+17 silly mapToRegistry   name: 'eslint-config-airbnb',
+17 silly mapToRegistry   rawSpec: '',
+17 silly mapToRegistry   spec: 'latest',
+17 silly mapToRegistry   type: 'tag' }
+18 silly mapToRegistry uri https://registry.npm.taobao.org/eslint-config-airbnb
+19 silly fetchNamedPackageData eslint
+20 silly mapToRegistry name eslint
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npm.taobao.org/
+23 silly mapToRegistry data Result {
+23 silly mapToRegistry   raw: 'eslint',
+23 silly mapToRegistry   scope: null,
+23 silly mapToRegistry   escapedName: 'eslint',
+23 silly mapToRegistry   name: 'eslint',
+23 silly mapToRegistry   rawSpec: '',
+23 silly mapToRegistry   spec: 'latest',
+23 silly mapToRegistry   type: 'tag' }
+24 silly mapToRegistry uri https://registry.npm.taobao.org/eslint
+25 silly fetchNamedPackageData eslint-plugin-jsx-a11y
+26 silly mapToRegistry name eslint-plugin-jsx-a11y
+27 silly mapToRegistry using default registry
+28 silly mapToRegistry registry https://registry.npm.taobao.org/
+29 silly mapToRegistry data Result {
+29 silly mapToRegistry   raw: 'eslint-plugin-jsx-a11y',
+29 silly mapToRegistry   scope: null,
+29 silly mapToRegistry   escapedName: 'eslint-plugin-jsx-a11y',
+29 silly mapToRegistry   name: 'eslint-plugin-jsx-a11y',
+29 silly mapToRegistry   rawSpec: '',
+29 silly mapToRegistry   spec: 'latest',
+29 silly mapToRegistry   type: 'tag' }
+30 silly mapToRegistry uri https://registry.npm.taobao.org/eslint-plugin-jsx-a11y
+31 silly fetchNamedPackageData eslint-plugin-import
+32 silly mapToRegistry name eslint-plugin-import
+33 silly mapToRegistry using default registry
+34 silly mapToRegistry registry https://registry.npm.taobao.org/
+35 silly mapToRegistry data Result {
+35 silly mapToRegistry   raw: 'eslint-plugin-import',
+35 silly mapToRegistry   scope: null,
+35 silly mapToRegistry   escapedName: 'eslint-plugin-import',
+35 silly mapToRegistry   name: 'eslint-plugin-import',
+35 silly mapToRegistry   rawSpec: '',
+35 silly mapToRegistry   spec: 'latest',
+35 silly mapToRegistry   type: 'tag' }
+36 silly mapToRegistry uri https://registry.npm.taobao.org/eslint-plugin-import
+37 silly fetchNamedPackageData eslint-plugin-react
+38 silly mapToRegistry name eslint-plugin-react
+39 silly mapToRegistry using default registry
+40 silly mapToRegistry registry https://registry.npm.taobao.org/
+41 silly mapToRegistry data Result {
+41 silly mapToRegistry   raw: 'eslint-plugin-react',
+41 silly mapToRegistry   scope: null,
+41 silly mapToRegistry   escapedName: 'eslint-plugin-react',
+41 silly mapToRegistry   name: 'eslint-plugin-react',
+41 silly mapToRegistry   rawSpec: '',
+41 silly mapToRegistry   spec: 'latest',
+41 silly mapToRegistry   type: 'tag' }
+42 silly mapToRegistry uri https://registry.npm.taobao.org/eslint-plugin-react
+43 verbose request uri https://registry.npm.taobao.org/eslint-plugin-import
+44 verbose request no auth needed
+45 info attempt registry request try #1 at 10:27:48 AM
+46 verbose request id 7e26acdf6dff9e72
+47 verbose etag "3517f-FYbrpBj2jPOVMQMBc+EaUIexdnA"
+48 http request GET https://registry.npm.taobao.org/eslint-plugin-import
+49 verbose request uri https://registry.npm.taobao.org/eslint-plugin-jsx-a11y
+50 verbose request no auth needed
+51 info attempt registry request try #1 at 10:27:48 AM
+52 verbose etag "28438-unyLe7cM7/0vqZnAQu5ceaCut+o"
+53 http request GET https://registry.npm.taobao.org/eslint-plugin-jsx-a11y
+54 verbose request uri https://registry.npm.taobao.org/eslint-config-airbnb
+55 verbose request no auth needed
+56 info attempt registry request try #1 at 10:27:48 AM
+57 verbose etag "17163-eS9wHZfGXazcJdZOEwSuk6p27XE"
+58 http request GET https://registry.npm.taobao.org/eslint-config-airbnb
+59 verbose request uri https://registry.npm.taobao.org/eslint
+60 verbose request no auth needed
+61 info attempt registry request try #1 at 10:27:48 AM
+62 verbose etag "84fd4-80SpuUO3uyzwGIsB5qow8BqWoH8"
+63 http request GET https://registry.npm.taobao.org/eslint
+64 verbose request uri https://registry.npm.taobao.org/eslint-plugin-react
+65 verbose request no auth needed
+66 info attempt registry request try #1 at 10:27:48 AM
+67 verbose etag "34560-8+ZhhoAt983VYnTqLxRvxhSXVzg"
+68 http request GET https://registry.npm.taobao.org/eslint-plugin-react
+69 http 304 https://registry.npm.taobao.org/eslint-plugin-import
+70 verbose headers { date: 'Fri, 22 Sep 2017 02:27:48 GMT',
+70 verbose headers   connection: 'keep-alive',
+70 verbose headers   'x-current-requests': '1',
+70 verbose headers   etag: '"3517f-FYbrpBj2jPOVMQMBc+EaUIexdnA"',
+70 verbose headers   'x-readtime': '64' }
+71 silly get cb [ 304,
+71 silly get   { date: 'Fri, 22 Sep 2017 02:27:48 GMT',
+71 silly get     connection: 'keep-alive',
+71 silly get     'x-current-requests': '1',
+71 silly get     etag: '"3517f-FYbrpBj2jPOVMQMBc+EaUIexdnA"',
+71 silly get     'x-readtime': '64' } ]
+72 verbose etag https://registry.npm.taobao.org/eslint-plugin-import from cache
+73 verbose get saving eslint-plugin-import to /Users/wonderchief/.npm/registry.npm.taobao.org/eslint-plugin-import/.cache.json
+74 verbose correctMkdir /Users/wonderchief/.npm correctMkdir not in flight; initializing
+75 silly fetchNamedPackageData No valid target from cache, forcing network
+76 verbose request uri https://registry.npm.taobao.org/eslint-plugin-import
+77 verbose request no auth needed
+78 info attempt registry request try #1 at 10:27:49 AM
+79 http request GET https://registry.npm.taobao.org/eslint-plugin-import
+80 http 304 https://registry.npm.taobao.org/eslint-config-airbnb
+81 verbose headers { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+81 verbose headers   connection: 'keep-alive',
+81 verbose headers   'x-current-requests': '1',
+81 verbose headers   etag: '"17163-eS9wHZfGXazcJdZOEwSuk6p27XE"',
+81 verbose headers   'x-readtime': '148' }
+82 silly get cb [ 304,
+82 silly get   { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+82 silly get     connection: 'keep-alive',
+82 silly get     'x-current-requests': '1',
+82 silly get     etag: '"17163-eS9wHZfGXazcJdZOEwSuk6p27XE"',
+82 silly get     'x-readtime': '148' } ]
+83 verbose etag https://registry.npm.taobao.org/eslint-config-airbnb from cache
+84 verbose get saving eslint-config-airbnb to /Users/wonderchief/.npm/registry.npm.taobao.org/eslint-config-airbnb/.cache.json
+85 verbose correctMkdir /Users/wonderchief/.npm correctMkdir not in flight; initializing
+86 http 304 https://registry.npm.taobao.org/eslint-plugin-jsx-a11y
+87 verbose headers { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+87 verbose headers   connection: 'keep-alive',
+87 verbose headers   'x-current-requests': '1',
+87 verbose headers   etag: '"28438-unyLe7cM7/0vqZnAQu5ceaCut+o"',
+87 verbose headers   'x-readtime': '99' }
+88 silly get cb [ 304,
+88 silly get   { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+88 silly get     connection: 'keep-alive',
+88 silly get     'x-current-requests': '1',
+88 silly get     etag: '"28438-unyLe7cM7/0vqZnAQu5ceaCut+o"',
+88 silly get     'x-readtime': '99' } ]
+89 verbose etag https://registry.npm.taobao.org/eslint-plugin-jsx-a11y from cache
+90 verbose get saving eslint-plugin-jsx-a11y to /Users/wonderchief/.npm/registry.npm.taobao.org/eslint-plugin-jsx-a11y/.cache.json
+91 verbose correctMkdir /Users/wonderchief/.npm correctMkdir not in flight; initializing
+92 silly fetchNamedPackageData No valid target from cache, forcing network
+93 verbose request uri https://registry.npm.taobao.org/eslint-plugin-jsx-a11y
+94 verbose request no auth needed
+95 info attempt registry request try #1 at 10:27:49 AM
+96 http request GET https://registry.npm.taobao.org/eslint-plugin-jsx-a11y
+97 http 304 https://registry.npm.taobao.org/eslint
+98 verbose headers { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+98 verbose headers   connection: 'keep-alive',
+98 verbose headers   'x-current-requests': '1',
+98 verbose headers   etag: '"84fd4-80SpuUO3uyzwGIsB5qow8BqWoH8"',
+98 verbose headers   'x-readtime': '203' }
+99 silly get cb [ 304,
+99 silly get   { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+99 silly get     connection: 'keep-alive',
+99 silly get     'x-current-requests': '1',
+99 silly get     etag: '"84fd4-80SpuUO3uyzwGIsB5qow8BqWoH8"',
+99 silly get     'x-readtime': '203' } ]
+100 verbose etag https://registry.npm.taobao.org/eslint from cache
+101 verbose get saving eslint to /Users/wonderchief/.npm/registry.npm.taobao.org/eslint/.cache.json
+102 verbose correctMkdir /Users/wonderchief/.npm correctMkdir not in flight; initializing
+103 http 304 https://registry.npm.taobao.org/eslint-plugin-react
+104 verbose headers { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+104 verbose headers   connection: 'keep-alive',
+104 verbose headers   'x-current-requests': '1',
+104 verbose headers   etag: '"34560-8+ZhhoAt983VYnTqLxRvxhSXVzg"',
+104 verbose headers   'x-readtime': '199' }
+105 silly get cb [ 304,
+105 silly get   { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+105 silly get     connection: 'keep-alive',
+105 silly get     'x-current-requests': '1',
+105 silly get     etag: '"34560-8+ZhhoAt983VYnTqLxRvxhSXVzg"',
+105 silly get     'x-readtime': '199' } ]
+106 verbose etag https://registry.npm.taobao.org/eslint-plugin-react from cache
+107 verbose get saving eslint-plugin-react to /Users/wonderchief/.npm/registry.npm.taobao.org/eslint-plugin-react/.cache.json
+108 verbose correctMkdir /Users/wonderchief/.npm correctMkdir not in flight; initializing
+109 silly fetchNamedPackageData No valid target from cache, forcing network
+110 verbose request uri https://registry.npm.taobao.org/eslint-plugin-react
+111 verbose request no auth needed
+112 info attempt registry request try #1 at 10:27:49 AM
+113 http request GET https://registry.npm.taobao.org/eslint-plugin-react
+114 silly fetchNamedPackageData No valid target from cache, forcing network
+115 verbose request uri https://registry.npm.taobao.org/eslint
+116 verbose request no auth needed
+117 info attempt registry request try #1 at 10:27:49 AM
+118 http request GET https://registry.npm.taobao.org/eslint
+119 http 200 https://registry.npm.taobao.org/eslint-plugin-jsx-a11y
+120 verbose headers { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+120 verbose headers   'content-type': 'application/json; charset=utf-8',
+120 verbose headers   'content-length': '164920',
+120 verbose headers   connection: 'keep-alive',
+120 verbose headers   'x-current-requests': '1',
+120 verbose headers   etag: '"28438-unyLe7cM7/0vqZnAQu5ceaCut+o"',
+120 verbose headers   'x-readtime': '69' }
+121 silly get cb [ 200,
+121 silly get   { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+121 silly get     'content-type': 'application/json; charset=utf-8',
+121 silly get     'content-length': '164920',
+121 silly get     connection: 'keep-alive',
+121 silly get     'x-current-requests': '1',
+121 silly get     etag: '"28438-unyLe7cM7/0vqZnAQu5ceaCut+o"',
+121 silly get     'x-readtime': '69' } ]
+122 verbose get saving eslint-plugin-jsx-a11y to /Users/wonderchief/.npm/registry.npm.taobao.org/eslint-plugin-jsx-a11y/.cache.json
+123 verbose correctMkdir /Users/wonderchief/.npm correctMkdir not in flight; initializing
+124 silly fetchPackageMetaData Error: No compatible version found: eslint-plugin-jsx-a11y@^#.#.#
+124 silly fetchPackageMetaData Valid install targets:
+124 silly fetchPackageMetaData 6.0.2, 6.0.1, 6.0.0, 5.1.1, 5.1.0, 5.0.3, 5.0.2, 5.0.1, 5.0.0, 4.0.0, 3.0.2, 3.0.1, 2.2.3, 2.2.2, 2.2.1, 2.2.0, 2.1.0, 2.0.1, 2.0.0, 1.5.5, 1.5.4, 1.5.3, 1.5.2, 1.5.1, 1.5.0, 1.4.2, 1.4.1, 1.4.0, 1.3.0, 1.2.3, 1.2.2, 1.2.1, 1.2.0, 1.1.0, 1.0.4, 1.0.3, 1.0.2, 1.0.1, 1.0.0, 0.6.2, 0.6.1, 0.6.0, 0.5.4, 0.5.3, 0.5.2, 0.5.1, 0.5.0, 0.4.3, 0.4.2, 0.4.1, 0.4.0, 0.3.1, 0.3.0, 0.2.2, 0.2.1, 0.2.0, 0.1.2, 0.1.1, 0.1.0, 0.0.2, 0.0.1
+124 silly fetchPackageMetaData
+124 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:178:16)
+124 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+124 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:20:8
+124 silly fetchPackageMetaData     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:174:7)
+124 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:241:18
+124 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15)
+124 silly fetchPackageMetaData  error for eslint-plugin-jsx-a11y@^#.#.# { Error: No compatible version found: eslint-plugin-jsx-a11y@^#.#.#
+124 silly fetchPackageMetaData Valid install targets:
+124 silly fetchPackageMetaData 6.0.2, 6.0.1, 6.0.0, 5.1.1, 5.1.0, 5.0.3, 5.0.2, 5.0.1, 5.0.0, 4.0.0, 3.0.2, 3.0.1, 2.2.3, 2.2.2, 2.2.1, 2.2.0, 2.1.0, 2.0.1, 2.0.0, 1.5.5, 1.5.4, 1.5.3, 1.5.2, 1.5.1, 1.5.0, 1.4.2, 1.4.1, 1.4.0, 1.3.0, 1.2.3, 1.2.2, 1.2.1, 1.2.0, 1.1.0, 1.0.4, 1.0.3, 1.0.2, 1.0.1, 1.0.0, 0.6.2, 0.6.1, 0.6.0, 0.5.4, 0.5.3, 0.5.2, 0.5.1, 0.5.0, 0.4.3, 0.4.2, 0.4.1, 0.4.0, 0.3.1, 0.3.0, 0.2.2, 0.2.1, 0.2.0, 0.1.2, 0.1.1, 0.1.0, 0.0.2, 0.0.1
+124 silly fetchPackageMetaData
+124 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:178:16)
+124 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+124 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:20:8
+124 silly fetchPackageMetaData     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:174:7)
+124 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:241:18
+124 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15) code: 'ETARGET' }
+125 http 200 https://registry.npm.taobao.org/eslint-plugin-import
+126 verbose headers { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+126 verbose headers   'content-type': 'application/json; charset=utf-8',
+126 verbose headers   'content-length': '217471',
+126 verbose headers   connection: 'keep-alive',
+126 verbose headers   'x-current-requests': '1',
+126 verbose headers   etag: '"3517f-FYbrpBj2jPOVMQMBc+EaUIexdnA"',
+126 verbose headers   'x-readtime': '162' }
+127 silly get cb [ 200,
+127 silly get   { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+127 silly get     'content-type': 'application/json; charset=utf-8',
+127 silly get     'content-length': '217471',
+127 silly get     connection: 'keep-alive',
+127 silly get     'x-current-requests': '1',
+127 silly get     etag: '"3517f-FYbrpBj2jPOVMQMBc+EaUIexdnA"',
+127 silly get     'x-readtime': '162' } ]
+128 verbose get saving eslint-plugin-import to /Users/wonderchief/.npm/registry.npm.taobao.org/eslint-plugin-import/.cache.json
+129 verbose correctMkdir /Users/wonderchief/.npm correctMkdir not in flight; initializing
+130 http 200 https://registry.npm.taobao.org/eslint-plugin-react
+131 verbose headers { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+131 verbose headers   'content-type': 'application/json; charset=utf-8',
+131 verbose headers   'content-length': '214368',
+131 verbose headers   connection: 'keep-alive',
+131 verbose headers   'x-current-requests': '1',
+131 verbose headers   etag: '"34560-8+ZhhoAt983VYnTqLxRvxhSXVzg"',
+131 verbose headers   'x-readtime': '92' }
+132 silly get cb [ 200,
+132 silly get   { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+132 silly get     'content-type': 'application/json; charset=utf-8',
+132 silly get     'content-length': '214368',
+132 silly get     connection: 'keep-alive',
+132 silly get     'x-current-requests': '1',
+132 silly get     etag: '"34560-8+ZhhoAt983VYnTqLxRvxhSXVzg"',
+132 silly get     'x-readtime': '92' } ]
+133 verbose get saving eslint-plugin-react to /Users/wonderchief/.npm/registry.npm.taobao.org/eslint-plugin-react/.cache.json
+134 verbose correctMkdir /Users/wonderchief/.npm correctMkdir not in flight; initializing
+135 silly fetchPackageMetaData Error: No compatible version found: eslint-plugin-import@^#.#.#
+135 silly fetchPackageMetaData Valid install targets:
+135 silly fetchPackageMetaData 2.7.0, 2.6.1, 2.6.0, 2.5.0, 2.3.0, 2.2.0, 2.1.0, 2.0.1, 2.0.0, 2.0.0-beta.1, 2.0.0-beta.0, 1.16.0, 1.15.0, 1.14.0, 1.13.0, 1.12.0, 1.11.1, 1.11.0, 1.10.3, 1.10.2, 1.10.0, 1.9.2, 1.9.1, 1.9.0, 1.8.1, 1.8.0, 1.7.0, 1.6.1, 1.6.0, 1.5.0, 1.4.0, 1.3.0, 1.2.0, 1.1.0, 1.0.4, 1.0.3, 1.0.2, 1.0.1, 1.0.0, 1.0.0-beta.0, 0.13.0, 0.12.1, 0.12.0, 0.11.0, 0.10.1, 0.10.0, 0.9.1, 0.8.1, 0.8.0, 0.7.9, 0.7.8, 0.7.7, 0.7.5, 0.7.4, 0.7.3, 0.7.2, 0.7.1, 0.7.0, 0.6.0, 0.5.2, 0.5.1, 0.4.5, 0.4.4, 0.4.3, 0.4.2, 0.4.1, 0.4.0, 0.3.13, 0.3.12, 0.3.11, 0.3.10, 0.3.9, 0.3.8, 0.3.6, 0.3.5, 0.3.4, 0.3.3, 0.3.2, 0.3.0
+135 silly fetchPackageMetaData
+135 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:178:16)
+135 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+135 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:20:8
+135 silly fetchPackageMetaData     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:174:7)
+135 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:241:18
+135 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15)
+135 silly fetchPackageMetaData  error for eslint-plugin-import@^#.#.# { Error: No compatible version found: eslint-plugin-import@^#.#.#
+135 silly fetchPackageMetaData Valid install targets:
+135 silly fetchPackageMetaData 2.7.0, 2.6.1, 2.6.0, 2.5.0, 2.3.0, 2.2.0, 2.1.0, 2.0.1, 2.0.0, 2.0.0-beta.1, 2.0.0-beta.0, 1.16.0, 1.15.0, 1.14.0, 1.13.0, 1.12.0, 1.11.1, 1.11.0, 1.10.3, 1.10.2, 1.10.0, 1.9.2, 1.9.1, 1.9.0, 1.8.1, 1.8.0, 1.7.0, 1.6.1, 1.6.0, 1.5.0, 1.4.0, 1.3.0, 1.2.0, 1.1.0, 1.0.4, 1.0.3, 1.0.2, 1.0.1, 1.0.0, 1.0.0-beta.0, 0.13.0, 0.12.1, 0.12.0, 0.11.0, 0.10.1, 0.10.0, 0.9.1, 0.8.1, 0.8.0, 0.7.9, 0.7.8, 0.7.7, 0.7.5, 0.7.4, 0.7.3, 0.7.2, 0.7.1, 0.7.0, 0.6.0, 0.5.2, 0.5.1, 0.4.5, 0.4.4, 0.4.3, 0.4.2, 0.4.1, 0.4.0, 0.3.13, 0.3.12, 0.3.11, 0.3.10, 0.3.9, 0.3.8, 0.3.6, 0.3.5, 0.3.4, 0.3.3, 0.3.2, 0.3.0
+135 silly fetchPackageMetaData
+135 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:178:16)
+135 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+135 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:20:8
+135 silly fetchPackageMetaData     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:174:7)
+135 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:241:18
+135 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15) code: 'ETARGET' }
+136 silly fetchPackageMetaData Error: No compatible version found: eslint-plugin-react@^#.#.#
+136 silly fetchPackageMetaData Valid install targets:
+136 silly fetchPackageMetaData 7.4.0-rc.1, 7.4.0-rc.0, 7.3.0, 7.2.1, 7.2.0, 7.1.0, 7.0.1, 7.0.0, 7.0.0-rc.1, 7.0.0-rc.0, 6.10.3, 6.10.2, 6.10.1, 6.10.0, 6.9.0, 6.8.0, 6.7.1, 6.7.0, 6.6.0, 6.5.0, 6.4.1, 6.4.0, 6.3.0, 6.2.2, 6.2.1, 6.2.0, 6.1.2, 6.1.1, 6.1.0, 6.0.0, 6.0.0-rc.1, 6.0.0-rc.0, 6.0.0-alpha.2, 6.0.0-alpha.1, 5.2.2, 5.2.1, 5.2.0, 5.1.1, 5.1.0, 5.0.1, 5.0.0, 4.3.0, 4.2.3, 4.2.2, 4.2.1, 4.2.0, 4.1.0, 4.0.0, 4.0.0-rc.1, 4.0.0-rc.0, 3.16.1, 3.16.0, 3.15.0, 3.14.0, 3.13.1, 3.13.0, 3.12.0, 3.11.3, 3.11.2, 3.11.1, 3.11.0, 3.10.0, 3.9.0, 3.8.0, 3.7.1, 3.7.0, 3.6.3, 3.6.2, 3.6.1, 3.6.0, 3.5.1, 3.5.0, 3.4.2, 3.4.1, 3.4.0, 3.3.2, 3.3.1, 3.3.0, 3.2.3, 3.2.2, 3.2.1, 3.2.0, 3.1.0, 3.0.0, 2.7.1, 2.7.0, 2.6.4, 2.6.3, 2.6.2, 2.6.1, 2.6.0, 2.5.2, 2.5.1, 2.5.0, 2.4.0, 2.3.0, 2.2.0, 2.1.1, 2.1.0, 2.0.2, 2.0.1, 2.0.0, 1.6.1, 1.6.0, 1.5.0, 1.4.1, 1.4.0, 1.3.0, 1.2.2, 1.2.1, 1.2.0, 1.1.0, 1.0.0
+136 silly fetchPackageMetaData
+136 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:178:16)
+136 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+136 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:20:8
+136 silly fetchPackageMetaData     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:174:7)
+136 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:241:18
+136 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15)
+136 silly fetchPackageMetaData  error for eslint-plugin-react@^#.#.# { Error: No compatible version found: eslint-plugin-react@^#.#.#
+136 silly fetchPackageMetaData Valid install targets:
+136 silly fetchPackageMetaData 7.4.0-rc.1, 7.4.0-rc.0, 7.3.0, 7.2.1, 7.2.0, 7.1.0, 7.0.1, 7.0.0, 7.0.0-rc.1, 7.0.0-rc.0, 6.10.3, 6.10.2, 6.10.1, 6.10.0, 6.9.0, 6.8.0, 6.7.1, 6.7.0, 6.6.0, 6.5.0, 6.4.1, 6.4.0, 6.3.0, 6.2.2, 6.2.1, 6.2.0, 6.1.2, 6.1.1, 6.1.0, 6.0.0, 6.0.0-rc.1, 6.0.0-rc.0, 6.0.0-alpha.2, 6.0.0-alpha.1, 5.2.2, 5.2.1, 5.2.0, 5.1.1, 5.1.0, 5.0.1, 5.0.0, 4.3.0, 4.2.3, 4.2.2, 4.2.1, 4.2.0, 4.1.0, 4.0.0, 4.0.0-rc.1, 4.0.0-rc.0, 3.16.1, 3.16.0, 3.15.0, 3.14.0, 3.13.1, 3.13.0, 3.12.0, 3.11.3, 3.11.2, 3.11.1, 3.11.0, 3.10.0, 3.9.0, 3.8.0, 3.7.1, 3.7.0, 3.6.3, 3.6.2, 3.6.1, 3.6.0, 3.5.1, 3.5.0, 3.4.2, 3.4.1, 3.4.0, 3.3.2, 3.3.1, 3.3.0, 3.2.3, 3.2.2, 3.2.1, 3.2.0, 3.1.0, 3.0.0, 2.7.1, 2.7.0, 2.6.4, 2.6.3, 2.6.2, 2.6.1, 2.6.0, 2.5.2, 2.5.1, 2.5.0, 2.4.0, 2.3.0, 2.2.0, 2.1.1, 2.1.0, 2.0.2, 2.0.1, 2.0.0, 1.6.1, 1.6.0, 1.5.0, 1.4.1, 1.4.0, 1.3.0, 1.2.2, 1.2.1, 1.2.0, 1.1.0, 1.0.0
+136 silly fetchPackageMetaData
+136 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:178:16)
+136 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+136 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:20:8
+136 silly fetchPackageMetaData     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:174:7)
+136 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:241:18
+136 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15) code: 'ETARGET' }
+137 http 200 https://registry.npm.taobao.org/eslint
+138 verbose headers { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+138 verbose headers   'content-type': 'application/json; charset=utf-8',
+138 verbose headers   'content-length': '544724',
+138 verbose headers   connection: 'keep-alive',
+138 verbose headers   'x-current-requests': '1',
+138 verbose headers   etag: '"84fd4-80SpuUO3uyzwGIsB5qow8BqWoH8"',
+138 verbose headers   'x-readtime': '272' }
+139 silly get cb [ 200,
+139 silly get   { date: 'Fri, 22 Sep 2017 02:27:49 GMT',
+139 silly get     'content-type': 'application/json; charset=utf-8',
+139 silly get     'content-length': '544724',
+139 silly get     connection: 'keep-alive',
+139 silly get     'x-current-requests': '1',
+139 silly get     etag: '"84fd4-80SpuUO3uyzwGIsB5qow8BqWoH8"',
+139 silly get     'x-readtime': '272' } ]
+140 verbose get saving eslint to /Users/wonderchief/.npm/registry.npm.taobao.org/eslint/.cache.json
+141 verbose correctMkdir /Users/wonderchief/.npm correctMkdir not in flight; initializing
+142 silly fetchPackageMetaData Error: No compatible version found: eslint@^#.#.#
+142 silly fetchPackageMetaData Valid install targets:
+142 silly fetchPackageMetaData 4.7.2, 4.7.1, 4.7.0, 4.6.1, 4.6.0, 4.5.0, 4.4.1, 4.4.0, 4.3.0, 4.2.0, 4.1.1, 4.1.0, 4.0.0, 4.0.0-rc.0, 4.0.0-beta.0, 4.0.0-alpha.2, 4.0.0-alpha.1, 4.0.0-alpha.0, 3.19.0, 3.18.0, 3.17.1, 3.17.0, 3.16.1, 3.16.0, 3.15.0, 3.14.1, 3.14.0, 3.13.1, 3.13.0, 3.12.2, 3.12.1, 3.12.0, 3.11.1, 3.11.0, 3.10.2, 3.10.1, 3.10.0, 3.9.1, 3.9.0, 3.8.1, 3.8.0, 3.7.1, 3.7.0, 3.6.1, 3.6.0, 3.5.0, 3.4.0, 3.3.1, 3.3.0, 3.2.2, 3.2.1, 3.2.0, 3.1.1, 3.1.0, 3.0.1, 3.0.0, 2.13.1, 2.13.0, 2.12.0, 2.11.1, 2.11.0, 2.10.2, 2.10.1, 2.10.0, 2.9.0, 2.8.0, 2.7.0, 2.6.0, 2.5.3, 2.5.2, 2.5.1, 2.5.0, 2.4.0, 2.3.0, 2.2.0, 2.1.0, 2.0.0, 2.0.0-rc.1, 2.0.0-rc.0, 2.0.0-beta.3, 2.0.0-beta.2, 2.0.0-beta.1, 2.0.0-alpha-2, 2.0.0-alpha-1, 1.10.3, 1.10.2, 1.10.1, 1.10.0, 1.9.0, 1.8.0, 1.7.3, 1.7.2, 1.7.1, 1.7.0, 1.6.0, 1.5.1, 1.5.0, 1.4.3, 1.4.2, 1.4.1, 1.4.0, 1.3.1, 1.3.0, 1.2.1, 1.2.0, 1.1.0, 1.0.0, 1.0.0-rc-3, 1.0.0-rc-2, 1.0.0-rc-1, 0.24.1, 0.24.0, 0.23.0, 0.22.1, 0.22.0, 0.21.2, 0.21.1, 0.21.0, 0.20.0, 0.19.0, 0.18.0, 0.17.1, 0.17.0, 0.16.2, 0.16.1, 0.16.0, 0.15.1, 0.15.0, 0.14.1, 0.14.0, 0.13.0, 0.12.0, 0.11.0, 0.11.0-alpha.0, 0.10.2, 0.10.1, 0.10.0, 0.10.0-alpha.2, 0.10.0-alpha.1, 0.10.0-alpha, 0.9.2, 0.9.1, 0.9.0, 0.8.2, 0.8.1, 0.8.0, 0.7.4, 0.7.3, 0.7.2, 0.7.1, 0.6.2, 0.6.1, 0.6.0, 0.5.1, 0.5.0, 0.4.5, 0.4.4, 0.4.3, 0.4.2, 0.4.1, 0.4.0, 0.3.0, 0.2.0, 0.1.4, 0.1.3, 0.1.2, 0.1.1, 0.1.0, 0.1.0-dev, 0.0.7, 0.0.6, 0.0.5, 0.0.4
+142 silly fetchPackageMetaData
+142 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:178:16)
+142 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+142 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:20:8
+142 silly fetchPackageMetaData     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:174:7)
+142 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:241:18
+142 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15)
+142 silly fetchPackageMetaData  error for eslint@^#.#.# { Error: No compatible version found: eslint@^#.#.#
+142 silly fetchPackageMetaData Valid install targets:
+142 silly fetchPackageMetaData 4.7.2, 4.7.1, 4.7.0, 4.6.1, 4.6.0, 4.5.0, 4.4.1, 4.4.0, 4.3.0, 4.2.0, 4.1.1, 4.1.0, 4.0.0, 4.0.0-rc.0, 4.0.0-beta.0, 4.0.0-alpha.2, 4.0.0-alpha.1, 4.0.0-alpha.0, 3.19.0, 3.18.0, 3.17.1, 3.17.0, 3.16.1, 3.16.0, 3.15.0, 3.14.1, 3.14.0, 3.13.1, 3.13.0, 3.12.2, 3.12.1, 3.12.0, 3.11.1, 3.11.0, 3.10.2, 3.10.1, 3.10.0, 3.9.1, 3.9.0, 3.8.1, 3.8.0, 3.7.1, 3.7.0, 3.6.1, 3.6.0, 3.5.0, 3.4.0, 3.3.1, 3.3.0, 3.2.2, 3.2.1, 3.2.0, 3.1.1, 3.1.0, 3.0.1, 3.0.0, 2.13.1, 2.13.0, 2.12.0, 2.11.1, 2.11.0, 2.10.2, 2.10.1, 2.10.0, 2.9.0, 2.8.0, 2.7.0, 2.6.0, 2.5.3, 2.5.2, 2.5.1, 2.5.0, 2.4.0, 2.3.0, 2.2.0, 2.1.0, 2.0.0, 2.0.0-rc.1, 2.0.0-rc.0, 2.0.0-beta.3, 2.0.0-beta.2, 2.0.0-beta.1, 2.0.0-alpha-2, 2.0.0-alpha-1, 1.10.3, 1.10.2, 1.10.1, 1.10.0, 1.9.0, 1.8.0, 1.7.3, 1.7.2, 1.7.1, 1.7.0, 1.6.0, 1.5.1, 1.5.0, 1.4.3, 1.4.2, 1.4.1, 1.4.0, 1.3.1, 1.3.0, 1.2.1, 1.2.0, 1.1.0, 1.0.0, 1.0.0-rc-3, 1.0.0-rc-2, 1.0.0-rc-1, 0.24.1, 0.24.0, 0.23.0, 0.22.1, 0.22.0, 0.21.2, 0.21.1, 0.21.0, 0.20.0, 0.19.0, 0.18.0, 0.17.1, 0.17.0, 0.16.2, 0.16.1, 0.16.0, 0.15.1, 0.15.0, 0.14.1, 0.14.0, 0.13.0, 0.12.0, 0.11.0, 0.11.0-alpha.0, 0.10.2, 0.10.1, 0.10.0, 0.10.0-alpha.2, 0.10.0-alpha.1, 0.10.0-alpha, 0.9.2, 0.9.1, 0.9.0, 0.8.2, 0.8.1, 0.8.0, 0.7.4, 0.7.3, 0.7.2, 0.7.1, 0.6.2, 0.6.1, 0.6.0, 0.5.1, 0.5.0, 0.4.5, 0.4.4, 0.4.3, 0.4.2, 0.4.1, 0.4.0, 0.3.0, 0.2.0, 0.1.4, 0.1.3, 0.1.2, 0.1.1, 0.1.0, 0.1.0-dev, 0.0.7, 0.0.6, 0.0.5, 0.0.4
+142 silly fetchPackageMetaData
+142 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:178:16)
+142 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+142 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:20:8
+142 silly fetchPackageMetaData     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:174:7)
+142 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:241:18
+142 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15) code: 'ETARGET' }
+143 silly rollbackFailedOptional Starting
+144 silly rollbackFailedOptional Finishing
+145 silly runTopLevelLifecycles Finishing
+146 silly install printInstalled
+147 verbose stack Error: No compatible version found: eslint-plugin-jsx-a11y@^#.#.#
+147 verbose stack Valid install targets:
+147 verbose stack 6.0.2, 6.0.1, 6.0.0, 5.1.1, 5.1.0, 5.0.3, 5.0.2, 5.0.1, 5.0.0, 4.0.0, 3.0.2, 3.0.1, 2.2.3, 2.2.2, 2.2.1, 2.2.0, 2.1.0, 2.0.1, 2.0.0, 1.5.5, 1.5.4, 1.5.3, 1.5.2, 1.5.1, 1.5.0, 1.4.2, 1.4.1, 1.4.0, 1.3.0, 1.2.3, 1.2.2, 1.2.1, 1.2.0, 1.1.0, 1.0.4, 1.0.3, 1.0.2, 1.0.1, 1.0.0, 0.6.2, 0.6.1, 0.6.0, 0.5.4, 0.5.3, 0.5.2, 0.5.1, 0.5.0, 0.4.3, 0.4.2, 0.4.1, 0.4.0, 0.3.1, 0.3.0, 0.2.2, 0.2.1, 0.2.0, 0.1.2, 0.1.1, 0.1.0, 0.0.2, 0.0.1
+147 verbose stack
+147 verbose stack     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:178:16)
+147 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+147 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:20:8
+147 verbose stack     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:174:7)
+147 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:241:18
+147 verbose stack     at FSReqWrap.oncomplete (fs.js:123:15)
+148 verbose cwd /Users/wonderchief/Desktop/arpt前端
+149 error Darwin 16.7.0
+150 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--save-dev" "eslint-config-airbnb" "eslint@^#.#.#" "eslint-plugin-jsx-a11y@^#.#.#" "eslint-plugin-import@^#.#.#" "eslint-plugin-react@^#.#.#"
+151 error node v6.10.3
+152 error npm  v3.10.10
+153 error code ETARGET
+154 error notarget No compatible version found: eslint-plugin-jsx-a11y@^#.#.#
+154 error notarget Valid install targets:
+154 error notarget 6.0.2, 6.0.1, 6.0.0, 5.1.1, 5.1.0, 5.0.3, 5.0.2, 5.0.1, 5.0.0, 4.0.0, 3.0.2, 3.0.1, 2.2.3, 2.2.2, 2.2.1, 2.2.0, 2.1.0, 2.0.1, 2.0.0, 1.5.5, 1.5.4, 1.5.3, 1.5.2, 1.5.1, 1.5.0, 1.4.2, 1.4.1, 1.4.0, 1.3.0, 1.2.3, 1.2.2, 1.2.1, 1.2.0, 1.1.0, 1.0.4, 1.0.3, 1.0.2, 1.0.1, 1.0.0, 0.6.2, 0.6.1, 0.6.0, 0.5.4, 0.5.3, 0.5.2, 0.5.1, 0.5.0, 0.4.3, 0.4.2, 0.4.1, 0.4.0, 0.3.1, 0.3.0, 0.2.2, 0.2.1, 0.2.0, 0.1.2, 0.1.1, 0.1.0, 0.0.2, 0.0.1
+155 error notarget This is most likely not a problem with npm itself.
+155 error notarget In most cases you or one of your dependencies are requesting
+155 error notarget a package version that doesn't exist.
+156 verbose exit [ 1, true ]

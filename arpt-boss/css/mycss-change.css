@@ -1,0 +1,698 @@
+/*   try   */
+/*   try   */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style: none;
+}
+
+body {
+    background-image: url("../images/login-bg.jpg");
+    font-family: "微软雅黑";
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.black {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.r-logo {
+
+    height: 180px;
+    margin-top: 94px;
+    position: relative;
+}
+
+.r-icon, .r-word {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("../images/login-icon1.png");
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+.r-icon {
+}
+
+.r-word {
+    background-image: url("../images/login-icon2.png");
+}
+
+.form-group {
+    margin-bottom: -11px;
+}
+
+.middle {
+    height: 300px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px #1D1717;
+    background: #252429;
+    border-radius: 15px;
+    color: #180623;
+    display: none;
+}
+
+.middle p {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.middle span {
+    color: #666;
+
+}
+
+.middle .p1 {
+    margin-top: 60px;
+
+}
+
+.middle .txt {
+    margin-left: 30px;
+}
+
+.form-horizontal {
+    margin-top: 17px;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+
+.b-tn {
+    background: linear-gradient(90deg, #F12C43, #EB34A1);
+    margin-top: 37px;
+    border-radius: 36px;
+    font-size: 1em;
+    height: 47px;
+    box-shadow: none;
+    color: #fff;
+    font-weight: bold;
+    width: 30%;
+    margin-left: 12.5%;
+
+}
+
+.col-md-6 > input:focus {
+    box-shadow: none;
+    border-color: #EF2F61;
+    color: #EF2F61;
+
+}
+
+.a-color {
+    transition: all 0.4s;
+}
+
+.b-tn::-webkit-input-placeholder {
+    color: #f72109;
+}
+
+.b-tn::-moz-placeholder {
+    color: #f72109;
+}
+
+.b-tn::-ms-placeholder {
+    color: #f72109;
+}
+
+.first {
+    margin-top: 20px;
+}
+
+.first .col-md-6 > input {
+    background-image: url("../images/account.png");
+    background-size: 20px 20px;
+    padding-left: 27%;
+    background-color: rgba(0, 0, 0, 0.01);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+.first .col-md-6 a {
+    color: #ccc;
+}
+
+.second .col-md-6 a {
+    color: #ccc;
+}
+
+.second .col-md-6 > input {
+    background-image: url("../images/password.png");
+    background-color: rgba(0, 0, 0, 0.01);
+    padding-left: 27%;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+
+}
+
+.second {
+    margin-top: 52px;
+}
+
+.nav li a {
+    cursor: pointer;
+}
+
+.col-md-6 > input {
+    text-align: center;
+    color: #ccc;
+    border: none;
+    border-bottom: 2px solid #A19E9D;
+    box-shadow: none;
+    text-align: left;
+    border-radius: 0;
+    padding: 0;
+    line-height: 50px;
+    font-size: 14px;
+    height: 50px;
+}
+
+.col-md-6 label {
+    color: #666;
+    font-size: 18px;
+}
+
+.nav-show {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: none;
+}
+
+.nav-shadow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2001;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.nav-you {
+    background: #262728;
+    height: 100%;
+    padding: 0;
+    z-index: 2002;
+    overflow: auto;
+}
+
+.nav-in {
+    height: 100%;
+}
+
+.nav-list li {
+    /*    background: linear-gradient(90deg,#F12C43 ,#EB34A1 );
+        margin-bottom: 30px;
+        border-radius:12px;*/
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 70px;
+    border-bottom: 1px solid #333;
+    background-repeat: no-repeat;
+}
+
+.nav-list li:nth-of-type(1) {
+    margin-top: 50px;
+}
+
+.nav-list li:nth-of-type(1) a {
+    background-image: url("../images/basic.png");
+    background-position: 15px center;
+    background-size: 1.5em 1.5em;
+    background-repeat: no-repeat;
+}
+
+.nav-list li:nth-of-type(2) a {
+    background-image: url("../images/customer.png");
+    background-position: 15px center;
+    background-size: 1.5em 1.5em;
+    background-repeat: no-repeat;
+}
+
+.nav-list li:nth-of-type(3) a {
+    background-image: url("../images/project1.png");
+    background-position: 15px center;
+    background-size: 1.5em 1.5em;
+    background-repeat: no-repeat;
+}
+
+.nav-list li:nth-of-type(4) a {
+    background-image: url("../images/tongji.png");
+    background-position: 15px center;
+    background-size: 1.5em 1.5em;
+    background-repeat: no-repeat;
+}
+
+.nav-list li:nth-of-type(5) a {
+    background-image: url("../images/tools.png");
+    background-position: 15px center;
+    background-size: 1.5em 1.5em;
+    background-repeat: no-repeat;
+}
+
+.nav-list li:nth-of-type(6) a {
+    background-image: url("../images/upload.png");
+    background-position: 15px center;
+    background-size: 1.5em 1.5em;
+    background-repeat: no-repeat;
+}
+.nav-list li:nth-of-type(7) a {
+    background-image: url("../images/account-change.png");
+    background-position: 15px center;
+    background-size: 1.5em 1.5em;
+    background-repeat: no-repeat;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.logo {
+    width: 100%;
+    height: 178px;
+    background: none;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.pic {
+
+    background: url("../images/u206-1.png") no-repeat center top;
+    height: 111px;
+    background-size: contain;
+    margin-top: 50px;
+    width: 90%;
+    margin-left: 5%;
+    -webkit-animation: float 2s infinite;
+    -o-animation: float 2s infinite;
+    animation: float 3s infinite;
+
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(10px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+.nav-you span {
+    text-align: center;
+    color: #999;
+    /*position: absolute;*/
+    width: 100%;
+    bottom: 0;
+    font-size: 0.6em;
+}
+
+.navbar-header {
+    text-align: center;
+    overflow: hidden;
+}
+
+.navbar-brand {
+    float: none;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    text-shadow: 0 0 2px blue;
+}
+
+html, body {
+    /*height: 100%;*/
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+    font-size: 1.3em;
+    margin-left: 12%;
+    letter-spacing: 2px;
+}
+
+.hahaha {
+    display: none;
+}
+
+.signup {
+    background: linear-gradient(90deg, #F12C43, #EB34A1);
+    margin-top: 154px;
+    border-radius: 36px;
+    font-size: 1em;
+    height: 47px;
+    box-shadow: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.name {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.navbar-inverse .navbar-toggle {
+    text-align: right;
+    border: none;
+}
+
+.navbar-inverse .navbar-toggle span:nth-of-type(2) {
+    width: 22px;
+}
+
+.navbar-inverse .navbar-toggle span:nth-of-type(3) {
+    width: 19px;
+}
+
+.navbar-inverse .navbar-toggle span:nth-of-type(4) {
+    width: 22px;
+}
+
+.navbar-inverse {
+    border: none;
+    background-color: #26252A;
+    box-shadow: 0 1px 10px #000;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.part1-shadow {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.first .col-md-6 > input {
+    padding-left: 0;
+    text-align: center;
+}
+
+.second .col-md-6 > input {
+    padding-left: 0;
+    text-align: center;
+}
+
+.form-control-feedback {
+    position: absolute;
+    left: 13px;
+    top: 6px;
+}
+
+@media screen and (max-width: 300px) {
+
+    .form-horizontal {
+        margin-top: 9px;
+    }
+
+    .nav-list li {
+        height: 60px;
+        line-height: 60px;
+
+    }
+
+    .nav-list li:nth-of-type(1) {
+        margin-top: 0px;
+        background-size: 22px 22px;
+    }
+
+    .nav-list li:nth-of-type(2) {
+        background-size: 22px 22px;
+
+    }
+
+    .nav-list li:nth-of-type(3) {
+        background-size: 20px 20px;
+
+    }
+
+    .nav-list li:nth-of-type(4) {
+        background-size: 22px 22px;
+
+    }
+
+    .nav-list li:nth-of-type(5) {
+        background-size: 22px 22px;
+
+    }
+
+    .navbar-inverse .navbar-brand {
+        margin-left: 14%;
+        font-size: 19px;
+    }
+
+    .part2 {
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+
+    .part2 p {
+        line-height: 50px;
+        font-size: 13px;
+    }
+
+    .part2 p .hl {
+        font-size: 13px;
+    }
+
+    .part2 p .hl {
+        font-size: 13px;
+    }
+
+    ul.col-xs-8.col-xs-offset-2.nav-list {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .nav-list li a {
+        font-size: 1em;
+    }
+
+    .add {
+        top: 291px;
+    }
+
+    .r-logo {
+        margin-top: 90px;
+    }
+
+    .logo {
+        height: 132px;
+    }
+
+    .pic {
+        margin-top: 27px;
+    }
+
+    .signup {
+        margin-top: 114px;
+    }
+
+    .middle {
+        height: 236px;
+        margin-top: 10px;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .b-tn {
+        margin-top: 38px;
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .nav-you p:nth-of-type(1) {
+        font-size: 0.7em;
+    }
+
+    .nav-you p {
+        font-size: 0.6em;
+    }
+
+    .nav-you {
+        width: 50%;
+        margin-left: 50%;
+    }
+
+    .nav-you p:nth-of-type(2) {
+        font-size: 0.7em;
+    }
+
+}
+
+@media screen and (min-width: 330px) and (max-width: 385px) {
+    .nav-list li:nth-of-type(1) {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .r-logo {
+        height: 180px;
+        margin-top: 160px;
+        position: relative;
+        width: 30%;
+        margin-left: 35%;
+    }
+
+    .r-icon, .r-word {
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-image: url(../images/login-icon1.png);
+        width: 100%;
+        height: 129%;
+        left: 0;
+    }
+
+    .r-word {
+        background-image: url("../images/login-icon2.png");
+    }
+
+    .form-horizontal {
+        margin-top: 6px;
+    }
+
+    .middle {
+        margin-top: 70px;
+    }
+
+    .middle .row1 .title {
+        font-size: 38px;
+    }
+
+    .first .col-md-6 > input {
+        font-size: 20px;
+    }
+
+    .second .col-md-6 > input {
+        font-size: 20px;
+    }
+
+    .b-tn {
+        /*        margin-top: 95px;
+                font-size: 21px;
+                width: 25%;
+                margin-left: 38%;*/
+        margin-top: 53px;
+        font-size: 16px;
+        width: 40%;
+        margin-left: 0;
+    }
+
+    .first {
+        margin-top: 40px;
+    }
+
+    .second {
+        margin-top: 72px;
+    }
+
+}
+/* 2017-06-08  sunjia */
+p.reg-alert {
+    margin: 80px 0 40px 0;
+}
+#registerform #r_b-tn_b{
+    margin: 0;
+}
+#testresult_star .star-con{
+    padding: 10px;
+}
+.star-top{
+    overflow:hidden;
+    width: 16em;
+    margin: 0 auto;
+}
+.star-top .img2{
+    position:static;
+    float: left;
+}
+.star-top .vs{
+    float: left;
+    font-weight: 700;
+    color: #fff;
+    display: block;
+    font-size: 24px;
+    margin: 25px 0 10px 10px;
+}
+.star-top .starImg{
+    float: left;
+    width: 6em;
+    height: 107px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    position: relative;
+}
+.star-name{
+    background-color: rgba(160,168,181,0.7);
+    text-align: center;
+    color: #f4f5f5;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.result1 .star-con .para{
+    position: static;
+    width: 100%;
+}
+#testresult_star .star-box,#testresult_star .star-open{
+    margin-top: 1em;
+}
+@media screen and (min-width: 450px){
+    .row2 #testresult_star {
+        margin-top: 58px;
+        height: auto;
+    }
+}

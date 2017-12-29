@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>转发排名</title>
+    <link rel="stylesheet" href="css/result.css">
+</head>
+<body>
+    <div class="container">
+        <div class="time">
+			<div class="timeText">倒计时</div>
+			<div class="timeBox">
+				<div class="days1"></div>
+				<div class="days2"></div>
+				<div class="hours1"></div>
+				<div class="hours2"></div>
+				<div class="mins1"></div>
+				<div class="mins2"></div>
+				<div class="daysText">days</div>
+				<div class="hoursText">hours</div>
+				<div class="minsText">mins</div>
+			</div>
+        </div>
+
+        <div class="getMoney">
+			<!-- <div class="person" style="top:52%">
+				<div class="number">1</div>
+	            <div class="photo">
+					<img src="images/champion.png" alt="">
+	            </div>
+	            <div class="line">
+	            	<div class="names">聆歌科技</div>
+	            	<div class="colorLine"></div>
+	            </div>
+	            <div class="randNumber">1111</div>
+            </div> -->
+        </div>
+        <div class="rand">
+        	<div class="zhuanfalian"></div>
+            <!-- <div class="person">
+				<div class="number">1</div>
+	            <div class="photo">
+					<img src="images/champion.png" alt="">
+	            </div>
+	            <div class="line">
+	            	<div class="names">聆歌科技</div>
+	            	<div class="colorLine"></div>
+	            </div>
+	            <div class="randNumber">1111</div>
+            </div>
+            <div class="person" style="top: 29%;">
+				<div class="number">1</div>
+	            <div class="photo">
+					<img src="images/First-runner-up.png" alt="">
+
+	            </div>
+	            <div class="line">
+	            	<div class="names">聆歌科技</div>
+	            	<div class="colorLine"></div>
+	            </div>
+	            <div class="randNumber">1111</div>
+            </div>
+            <div class="person" style="top: 43%;">
+				<div class="number">1</div>
+	            <div class="photo">
+					<img src="images/The-bronze.png" alt="">
+
+	            </div>
+	            <div class="line">
+	            	<div class="names">聆歌科技</div>
+	            	<div class="colorLine"></div>
+	            </div>
+	            <div class="randNumber">1111</div>
+            </div>
+            <div class="person" style="top: 56%;">
+				<div class="number">1</div>
+	            <div class="photo"></div>
+	            <div class="line">
+	            	<div class="names">聆歌科技</div>
+	            	<div class="colorLine"></div>
+	            </div>
+	            <div class="randNumber">1111</div>
+            </div>
+            <div class="person" style="top: 68%;">
+				<div class="number">1</div>
+	            <div class="photo"></div>
+	            <div class="line">
+	            	<div class="names">聆歌科技</div>
+	            	<div class="colorLine"></div>
+	            </div>
+	            <div class="randNumber">1111</div>
+            </div> -->
+
+            <div class="text6">数据采集时间</div>
+           <div class="text7"></div>
+
+
+        </div>
+        <div class="explain" href="javascript:;">领奖说明</div>
+        <footer>
+        	-广州聆歌信息科技公司-
+        </footer>
+    </div>
+    <!-- 模态框 -->
+    <div class="modalBox">
+	    <div class="overLay">
+				<img src="images/awards.png" alt="" class="mark">
+	    </div>
+	</div>
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/result.js"></script>
+
+<script>
+    $(".explain").click(function(){
+    	$(".modalBox").css("display","block");
+    });
+    $(".overLay").click(function(){
+    	$(".modalBox").css("display","none");
+    });
+</script>
+</html>

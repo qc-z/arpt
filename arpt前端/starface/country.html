@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="libraries/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libraries/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libraries/css/bootstrap.offcanvas.min.css">
+    <link href="libraries/css/bootstrap-table.min.css" rel="stylesheet"/>
+    <script src="libraries/js/jquery.min.js"></script>
+    <script src="libraries/js/bootstrap.min.js"></script>
+    <script src="libraries/js/bootstrap.offcanvas.min.js"></script>
+    <script src="libraries/js/bootstrap-table.min.js"></script>
+    <script src="libraries/js/bootstrap-table-zh-CN.min.js"></script>
+    <link rel="stylesheet" href="libraries/css/jquery-confirm.css">
+    <script src="libraries/js/jquery-confirm.js"></script>
+    <script src="script/bbmis.js"></script>
+    <title>明星管理后台</title>
+
+    <style>
+        .modal .row {
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<header class="clearfix">
+    <button type="button" class="navbar-toggle offcanvas-toggle" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" id="offcanvas-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+
+    <nav class="navbar navbar-default navbar-offcanvas navbar-offcanvas-touch" role="navigation" id="js-bootstrap-offcanvas">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">明星管理后台</a>
+            </div>
+            <div>
+                <ul id="menu" class="nav navbar-nav">
+                    <li><a href="index.html">资料管理</a></li>
+                    <li class="active"><a href="country.html">地区管理</a></li>
+                </ul>
+
+                <ul id="logout" class="nav navbar-nav navbar-right">
+                    <li onclick="logout()"><a>退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-offset-10 col-md-2" style="text-align: center">
+                    <button class="btn btn-warning" onclick="addModal()">添加</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <table class='table' id="tables">
+
+            </table>
+        </div>
+
+        <div class="panel-footer" style="display: none">
+            <div class="row">
+                <div class="col-md-2" style="text-align: center">
+                    <h5>共<label id="total_page"></label>页当前第<label id="pagination">1</label>页</h5>
+                </div>
+                <div class="col-md-offset-9">
+                    <div class="row" style="text-align: center">
+                        <div class="col-md-5">
+                            <button class="btn btn-default" id="lastPage" disabled>上一页</button>
+                        </div>
+                        <div class="col-md-5">
+                            <button class="btn btn-default" id="nextPage">下一页</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabe3">添加地区</h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-2">
+                            <label>国家名称</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input class="form-control" type="text" id="name" value="" placeholder="">
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-2">
+                            <label>性别</label>
+                        </div>
+                        <div class="col-md-9">
+                            <select class="form-control" id="sex">
+                                <option value="0">女</option>
+                                <option value="1">男</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="addSubmit()">确认</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./js/country.js"></script>
+</body>
+</html>

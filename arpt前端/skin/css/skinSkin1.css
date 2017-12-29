@@ -1,0 +1,55 @@
+/* index */
+.camera span{
+    background-image: url("../static/index/index2.png");
+}
+.button button span {
+    background-image: url(../static/index/index3.png);
+}
+.symbol{
+    background-image: url(../static/index/index4.png);
+}
+.loading_pic span{
+    background-image: url("../static/mobile/mobile1.png");
+}
+.loading_text span:nth-of-type(2){
+    color: rgb(239, 48, 119);
+}
+#preresult_text{
+    color: rgb(239, 48, 119);
+}
+.get_code_dis {
+    background: lightgrey;
+}
+.sure button{
+    background: rgb(239, 48, 119);
+}
+
+.get_code {
+    background: rgb(239, 48, 119);
+}
+/* report */
+.total{
+    background: rgb(247, 226, 235);
+}
+.total_skin_unselect {
+    background: rgb(252, 198, 211);
+}
+
+.total_skin_select {
+    color: white;
+    background: rgb(239, 48, 119);
+}
+.one{
+    border: 1px solid rgb(252, 198, 211);
+}
+.pimple_text_selected {
+    border: 1px solid rgb(238, 48, 119);
+    border-radius: 5px;
+    color: rgb(238, 48, 119);
+}
+#color_level{
+    background: url(../static/result/result2.png) no-repeat center;
+}
+.map_body{
+    background: rgb(247, 226, 235);
+}

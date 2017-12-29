@@ -1,0 +1,272 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Microsoft Yahei';
+}
+
+
+/* .container{
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; //因为使用overflow滚动体验不如正常的页面滚动，加上这个样式以后滚动即会变得顺滑
+} */
+
+.s_header {
+    height: 6%;
+    background: rgb(238, 49, 119);
+    overflow: hidden;
+    text-align: center;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding-top: .5rem;
+}
+
+.s_header div {
+    width: auto;
+    height: 1rem;
+    display: inline-block;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    z-index: 9999;
+}
+
+.back_icon {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background: url(../static/im/im_03.png) no-repeat center;
+    background-size: 100% 90%;
+    float: left;
+}
+
+.back_text {
+    display: inline-block;
+    line-height: 1rem;
+    font-size: 0.8rem;
+    color: white;
+    float: left;
+}
+
+.header_title {
+    line-height: 1rem;
+    font-size: 0.8rem;
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.s_body {
+   /*  padding: 2.2rem 0.5rem 2.4rem 0.5rem;
+   overflow: auto;
+   height: 23.5rem;
+   */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 6%;
+    padding-top: .6rem;
+    bottom: 6%;
+    padding-bottom: .8rem;
+    overflow: auto;
+}
+
+@media only screen and (min-width: 760px) {
+    .s_body {
+        height: 17rem;
+    }
+}
+
+.s_body_context {
+    width: 100%;
+    padding: 0.3rem 0;
+}
+
+.s_body_context_time {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 0.8rem;
+}
+
+.s_body_context_detail1 {
+    width: 100%;
+    overflow: hidden;
+}
+
+.s_body_context_detail1 img:nth-of-type(1) {
+    width: 2rem;
+    float: right;
+}
+
+.s_body_context_detail1 img:nth-of-type(2) {
+    height: 1rem;
+    float: right;
+    position: relative;
+    top: 0.5rem;
+    margin-left: -1px;
+}
+
+.s_body_context_detail1 span,
+.photo {
+    display: inline-block;
+    max-width: 11rem;
+    float: right;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    background: rgb(220, 220, 220);
+    border-radius: 5px;
+    min-height: 1rem;
+    padding: 0.3rem 0.5rem;
+    word-wrap: break-word;
+}
+
+.right {
+    float: left;
+}
+
+.s_body_context_detail2 {
+    width: 100%;
+    overflow: hidden;
+}
+
+.s_body_context_detail2 img:nth-of-type(1) {
+    width: 2rem;
+    float: left;
+}
+
+.s_body_context_detail2 img:nth-of-type(2) {
+    height: 1rem;
+    float: left;
+    position: relative;
+    top: 0.5rem;
+}
+
+.s_body_context_detail2 span {
+    display: inline-block;
+    float: left;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    background: rgb(238, 49, 119);
+    border-radius: 5px;
+    min-height: 1rem;
+    padding: 0.3rem 0.5rem;
+    color: white;
+}
+
+.s_ctrl {
+    /* background: rgb(241, 241, 241);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 0.4rem 0; */
+    background: rgb(241, 241, 241);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 0.4rem 0;
+    height: 6%;
+}
+
+.s_toolbar {
+    height: 20%;
+    padding: 0.2rem 0.3rem;
+}
+
+.s_toolbar img {
+    height: 100%;
+}
+
+.s_input {
+    height: 1.5rem;
+    position: relative;
+    width: 11rem;
+    float: left;
+    margin-top: 0.05rem;
+}
+
+.s_input textarea {
+    width: 100%;
+    height: 1.5rem;
+    resize: none;
+    font-size: 14px;
+    font-family: 'Microsoft Yahei';
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.s_send {
+    height: 1.4rem;
+    padding: 0.2rem 0.3rem 0 0.3rem;
+    overflow: hidden;
+}
+
+.s_send button {
+    height: 100%;
+    float: right;
+    border: none;
+    color: white;
+    background: rgb(238, 49, 119);
+    padding: 0 0.6rem;
+    border-radius: 6px;
+}
+
+.s_body_context_detail1 .photo {
+    width: 8em;
+    border-radius: 2px;
+    float: right;
+}
+
+.s_body_context_detail2 .photo {
+    width: 9em;
+    border-radius: 2px;
+    background: #ee3077;
+}
+
+.s_toolbar {
+    height: 1rem;
+    background: url(../static/im/im_23.png) no-repeat center;
+    position: relative;
+    width: 1.2rem;
+    background-size: contain;
+    float: left;
+    left: .05rem;
+    top: 0.2rem;
+}
+
+#s_input {
+    height: 2em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    width: 100%;
+}
+
+
+/* sunjia 2017-5-19 */
+
+.picShade {
+    width: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, .5);
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.picShade img {
+    width: 90%;
+}

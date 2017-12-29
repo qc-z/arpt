@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ARPT总裁管理后台系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="js/webuploader.css">
+    <link rel="stylesheet" href="css/mycss-change.css">
+    <link rel="stylesheet" href="css/2.css">
+    <link rel="stylesheet" href="css/upload.css">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <style type="text/css">
+        #insert td {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container-fluid">
+    <nav class="navbar navbar-inverse navbar-fixed-top animated" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:;">广告图片上传</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="basic-message.html">基本信息</a></li>
+                    <li><a href="customer-list.html">客户列表</a></li>
+                    <li><a href="project-management.html">项目管理</a></li>
+                    <li><a href="data-manage.html">流量统计</a></li>
+                    <li><a href="tools.html">拓客工具</a></li>
+                    <li><a href="upload.html" style="padding-left: 2rem;">广告图片管理</a></li>
+                    <li><a href="account-change.html">修改密码</a></li>
+                    <li><a href="#" class="s_signout">退出</a></li>
+                </ul>
+                <!--<form class="navbar-form navbar-right">-->
+                <!--<input type="text" class="form-control" placeholder="Search...">-->
+                <!--</form>-->
+            </div>
+        </div>
+    </nav>
+    <div class="nav-show">
+        <div class="nav-shadow"></div>
+        <div class=" col-sm-3 col-sm-offset-9 col-xs-5 col-xs-offset-7 nav-you">
+            <div class="logo">
+                <div class="col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 pic">
+
+                </div>
+            </div>
+            <ul class="nav-list ">
+                <li><a href="basic-message.html">基本信息</a></li>
+                <li><a href="customer-list.html">客户列表</a></li>
+                <li><a href="project-management.html">项目管理</a></li>
+                <li><a href="data-manage.html">流量统计</a></li>
+                <li><a href="tools.html">拓客工具</a></li>
+                <li><a href="upload.html" style="padding-left: 2rem;">广告图片管理</a></li>
+                <li><a href="account-change.html">修改密码</a></li>
+                <li><a href="#" class="s_signout">退出</a></li>
+                <li><span>2016-2017@ARPT v1.2</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row" id="container">
+        <div class="col-lg-7 col-md-8 col-sm-12">
+            <div class="table-container table-responsive">
+                <a data-toggle="modal" data-target="#example" href="#example" class="btn btn-primary btn-large" id="click">添加WEB版广告</a>
+                <span id="pc">
+                    <a data-toggle="modal" data-target="#adExample2" href="#adExample2" class="btn btn-primary btn-large" id="adClick">添加广告机广告</a>
+                    <a data-toggle="modal" data-target="#adExample3" href="#adExample3" class="btn btn-primary btn-large" id="editAr">修改广告机广告</a>
+                    <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="text">选择广告机上屏广告效果
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a data-type="skin">皮肤测试</a></li>
+                                <li><a data-type="face">颜值测试</a></li>
+                                <li><a data-type="live">实时预览</a></li>
+                                <li><a data-type="video">视频预览</a></li>
+                            </ul>
+                    </div>
+                </span>
+
+                <table class="table" id="insert">
+                    <!-- <tbody>
+                        <tr>
+                            <th>工具类型</th>
+                            <th>版本类型</th>
+                            <th>链接</th>
+                            <th>广告图片</th>
+                        </tr>
+                        <tr>
+                            <td>row1_cell1</td>
+                            <td>row1_cell2</td>
+                            <td>row1_cell3</td>
+                            <td><img src="images/title-bg-1.png" alt="" class="img"></td>
+                        </tr>
+                        <tr>
+                            <td>row1_cell1</td>
+                            <td>row1_cell2</td>
+                            <td>row1_cell3</td>
+                            <td><img src="images/title-bg-1.png" alt=""  class="img"></td>
+                        </tr>
+                    </tbody> -->
+                </table>
+            </div>
+            <div id="mobile" style="display: none">
+               <a data-toggle="modal" data-target="#adExample" href="#adExample" class="btn btn-primary btn-large" id="adClick">添加广告机广告</a>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="text">选择广告机上屏广告效果
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a data-type="skin">皮肤测试</a></li>
+                        <li><a data-type="face">颜值测试</a></li>
+                        <li><a data-type="live">实时预览</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-5 col-md-5 col-sm-12 right-con isblock">
+            <h1>广告机预览</h1>
+            <div class="ar">
+                <div class="arTop">
+                </div>
+                <div class="arMiddle">
+                        <!-- 轮播图 -->
+                    <div class="container">
+                        <div class="content bgcolor-1">
+                            <div id="slidy-container">
+                              <figure id="slidy">
+
+                              </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arBottom"></div>
+            </div>
+
+            <h1>视频预览</h1>
+            <video src="" controls="controls" id="video">
+            </video>
+        </div>
+
+        <!-- 添加模态框 -->
+        <div class="modal fade" id="example" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            添加WEb版广告
+                        </h4>
+                        <span style="font-size:1.6rem,color:#cc3d3d">温馨提示:营销工具广告尺寸：375*130,广告机-中屏：1080*892</span>
+                        
+                    </div>
+                    <div class="modal-body">
+                                <div class="form-group firstLink">
+                                    <label for="link">请填写图片链接</label>
+                                    <input type="text" class="form-control" id="link" placeholder="请填写图片跳转链接">
+                                </div>
+                                <div class="form-group">
+                                    <label for="names">请填写广告名称</label>
+                                    <input type="text" class="form-control" id="names" placeholder="请填写广告名称">
+                                </div>
+                                <!-- <div class="form-group link">
+                                    <label for="threeLink">第三张图片链接</label>
+                                    <input type="text" class="form-control" id="threeLink" placeholder="第三张图片链接">
+                                </div> -->
+                                <div class="form-groups">
+                                    <label for="selectfiles" id="selectfiles">请选择一张图片</label>
+                                </div>
+                                <div id="IMG">
+                                    <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: none" id="img1">
+                                </div>
+                                <!-- <h4>广告名称</h4>
+                                <div class="form-group">
+                                    <label for="name">请填写广告名称</label>
+                                    <input type="text" class="form-control" id="name" placeholder="请填写广告名称">
+                                </div> -->
+                                <h4>工具类型</h4>
+                                <select class="form-control" id="type">
+                                    <option value="2" text="皮肤测试">皮肤测试</option>
+                                    <option value="1" text="颜值测试"  selected="selected">颜值测试</option>
+                                    <option value="3" text="明星面对面">明星面对面</option>
+                                </select>
+                                <h4>版本类型</h4>
+                                <select class="form-control" id="tool">
+                                    <option value="WEB" text="WEB" selected="selected" disabled>WEB</option>
+                                </select>
+                        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" id="postfiles">确认</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+        <!-- 修改模态框 -->
+        <div class="modal fade" id="example1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            修改WEB版广告
+                        </h4>
+                        <span style="font-size:1.6rem,color:#cc3d3d">温馨提示:营销工具广告尺寸：375*130,广告机-中屏：1080*892</span>
+                    </div>
+                    <div class="modal-body">
+                                <div class="form-group firstLink">
+                                    <label for="link1">请填写图片链接</label>
+                                    <input type="text" class="form-control" id="link1" placeholder="请填写图片跳转链接">
+                                </div>
+                                <div class="form-group">
+                                    <label for="names1">请填写广告名称</label>
+                                    <input type="text" class="form-control" id="names1" placeholder="请填写广告名称">
+                                </div>
+                                <!-- <div class="form-group link">
+                                    <label for="threeLink">第三张图片链接</label>
+                                    <input type="text" class="form-control" id="threeLink" placeholder="第三张图片链接">
+                                </div> -->
+                                <div class="form-groups">
+                                    <label for="selectfiles1" id="selectfiles1">请选择修改后的图片</label>
+                                </div>
+                                <div id="IMG">
+                                    <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: none" id="img11">
+                                </div>
+                                <!-- <h4>广告名称</h4>
+                                <div class="form-group">
+                                    <label for="name">请填写广告名称</label>
+                                    <input type="text" class="form-control" id="name" placeholder="请填写广告名称">
+                                </div> -->
+                                <h4>工具类型</h4>
+                                <select class="form-control" id="type1">
+                                    <option value="2" text="皮肤测试">皮肤测试</option>
+                                    <option value="1" text="颜值测试">颜值测试</option>
+                                    <option value="3" text="明星面对面">明星面对面</option>
+                                </select>
+                                <h4>版本类型</h4>
+                                <select class="form-control" id="tool1">
+                                    <option value="WEB" text="WEB" disabled  selected="selected">WEB</option>
+                                </select>
+                        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" id="postfiles1">确认</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+        <!-- 修改广告机 -->
+        <div class="modal fade" id="adExample3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title edit" id="myModalLabel">
+                            修改广告机广告
+                        </h4>
+                        <span style="font-size:1.6rem,color:#cc3d3d">温馨提示:营销工具广告尺寸：375*130,广告机-中屏：1080*892</span>
+
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-groups">
+                            <label id="selectfiles41">请选择上屏1张皮肤测试图片</label>
+                            <div id="IMG5">
+                                <!-- <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block" id="img3"> -->
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="form-groups">
+                            <label id="selectfiles51">请选择上屏1张颜值测试图片</label>
+                            <div id="IMG6">
+                                <!-- <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block" id="img3"> -->
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="form-groups">
+                            <label id="selectfiles71">请选择上屏1张实时显示图片</label>
+                            <div id="IMG7">
+                                <!-- <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block" id="img3"> -->
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="form-groups">
+                            <label id="selectfiles61">请选择上屏1个视频</label>
+                            <div id="IMG8">
+                                <!-- <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block" id="img3"> -->
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-groups">
+                            <label  id="selectfiles21">请选择中屏3张轮播图片</label>
+                            <div id="IMG3">
+                                <!-- <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block">
+                                <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block" id="img22">
+                                <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block" id="img23"> -->
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-groups">
+                            <label id="selectfiles31">请选择下屏1张公司信息图</label>
+                            <div id="IMG4">
+                                <!-- <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block" id="img3"> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" id="adPostfiles">确认</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+        <!-- 增加广告机 -->
+        <div class="modal fade" id="adExample2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title edit" id="myModalLabel">
+                            增加广告机广告
+                        </h4>
+                        <span style="font-size:1.6rem,color:#cc3d3d">温馨提示:营销工具广告尺寸：375*130,广告机-中屏：1080*892</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-groups">
+                            <label id="selectfiles4">请选择上屏1张皮肤测试图片</label>
+
+                            <div id="IMG51">
+                                <!-- <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block" id="img3"> -->
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="form-groups">
+                            <label id="selectfiles5">请选择上屏1张颜值测试图片</label>
+
+                            <div id="IMG61">
+                                <!-- <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block" id="img3"> -->
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="form-groups">
+                            <label id="selectfiles7">请选择上屏1张实时显示图片</label>
+
+                            <div id="IMG71">
+                                <!-- <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block" id="img3"> -->
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="form-groups">
+                            <label id="selectfiles6">请选择上屏1个视频</label>
+
+                            <div id="IMG81">
+                                <!-- <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block" id="img3"> -->
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-groups">
+                            <label  id="selectfiles2">请选择中屏3张轮播图片</label>
+
+                            <div id="IMG31">
+                                <!-- <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block">
+                                <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block" id="img22">
+                                <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block" id="img23"> -->
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-groups">
+                            <label id="selectfiles3">请选择下屏1张公司信息图</label>
+
+                            <div id="IMG41">
+                                <!-- <img src="images/account.jpg" alt="" style="width:100%;height: 130px;display: block" id="img3"> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" id="editPostfiles">确认</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+        <p><a data-toggle="modal" data-target="#example1" href="#example1" class="btn btn-primary btn-large" id="click1">修改广告</a></p>
+    </div>
+</div>
+<script src="script/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="layer/layer.js"></script>
+<script src="js/myjs.js"></script>
+<script type="text/javascript" src="js/plupload.full.min.js"></script>
+<script src="js/uploadImg.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+</body>
+</html>
+
+<script src="js/cssslidy.js" type="text/javascript"></script>
+    <script>
+      setTimeout(function(){
+        cssSlidy({
+        timeOnSlide: 5,
+        timeBetweenSlides: .5,
+        slidyContainerSelector: '#slidy-container',
+        slidySelector: '#slidy',
+        captionSource: 'data-caption',
+        captionBackground: 'rgba(0,0,0,0.5)',
+        captionColor: '#ff0',
+        captionFont: 'Raleway, Brittanic Bold, Hevetica, sans-serif',
+        captionPosition: 'bottom',
+        captionAppear: 'perm',
+        captionSize: '16px',
+        captionPadding: '1em',
+        /*fallbackFunction: function(){ alert("Oh noes! You can't animate!"); },*/
+        cssAnimationName: 'slidy'
+      });
+        $("figure").attr({"class":"figure"})
+        $("#slidy .figure").css({"height":"100%"})
+
+
+      },500)
+    </script>
+
+
+
+

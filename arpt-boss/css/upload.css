@@ -1,0 +1,158 @@
+.firstLink {
+    margin-top: 4rem;
+}
+.link {
+    margin-top: 1rem;
+    color: #f1f8ff;
+}
+.form-group {
+    margin-bottom: 0px;
+}
+.form-groups {
+    margin-top: 2rem;
+}
+.btn {
+    margin-top: 2rem;
+}
+.btn-default {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+}
+#pc{
+    margin-bottom: 1rem;
+    display: inline-block;
+ }
+
+ body{
+        color: #000;
+        background: #fff;
+}
+
+h1 { margin: 0; }
+.container { width: 100%; padding: 0;}
+
+table
+{
+    color: #000;
+    margin: 0;
+    border-collapse: collapse;
+}
+
+td, th
+{
+    padding: .5em 1em;
+    border: 1px solid #999;
+    text-align: center;
+}
+
+.table-container
+{
+    width: 100%;
+    overflow-y: auto;
+    _overflow: auto;
+    margin: 0 0 1em;
+    padding-left: 2rem;
+}
+
+.table-container::-webkit-scrollbar
+{
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+}
+
+.table-container::-webkit-scrollbar-thumb
+{
+    border-radius: 8px;
+    border: 3px solid #fff;
+    background-color: rgba(0, 0, 0, .3);
+}
+.img {
+    width: 20rem;
+    height: 12rem;
+}
+.pics{
+    width: 2rem;
+    height: 2rem;
+}
+.btn-default {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-bottom: 0rem;
+}
+#selectfiles,#selectfiles1,#selectfiles2,#selectfiles3,#selectfiles4,#selectfiles5,#selectfiles6,#selectfiles7,#selectfiles21,#selectfiles31,#selectfiles41,#selectfiles51,#selectfiles61,#selectfiles71{
+    background-color: bisque;
+    padding: 1rem;
+}
+#click1{
+    visibility: hidden;
+}
+#IMG3>div,#IMG4>div{
+    position: relative;
+}
+#IMG3>div b,#IMG4>div b{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(0,0,0,.3);
+    color: #fff;
+    padding: 5px 0;
+    cursor: pointer;
+}
+#IMG3 img{
+    width: 100%;
+    height: 130px;
+}
+#IMG4 img{
+    width: 100%;
+    height: 130px;
+}
+.table-container{
+    position: relative;
+}
+.ar{
+    width: 42rem;
+    /*height: 56rem;*/
+    background-color: #ccc;
+}
+.arTop{
+    height: 30%;
+    /*background-color: #222;*/
+}
+.arMiddle{
+    height: 50%;
+    /*background-color: #111;*/
+
+}
+.arBottom{
+    height: 20%;
+    /*background-color: #545;*/
+
+}
+.arTop img{
+    width: 100%;
+    height: 100%
+}
+.arMiddle img{
+    width: 100%;
+    height: 100%
+
+}
+.arBottom img{
+    width: 100%;
+    height: 100%
+
+}
+video {
+    width: 42rem;
+    margin-top: 1rem;
+    top:70%;
+}
+#container{
+    margin-top:12rem;
+}
+
+

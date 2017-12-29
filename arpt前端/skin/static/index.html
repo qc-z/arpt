@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>皮肤测试</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0,
+    maximum-scale=1.0,
+    user-scalable=no">
+    <link rel="stylesheet" href="css/introduction.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/webuploader.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/datouwang.css" rel="stylesheet" type="text/css" />
+    <!--<link rel="stylesheet" href="css/skinSkin3.css">-->
+</head>
+
+<body>
+    <div class="header">
+        <img src="static/index/index1.png">
+    </div>
+
+    <div class="container-fluid conBg"  id="container">
+        <!-- 测试页 -->
+        <div class="body" id="s_body">
+            <div class="camera" id="filePicker">
+                <span id='selectfiles'></span>
+            </div>
+            <div class="button">
+                <button class="start" id='postfiles'>
+                    <span></span>
+                </button>
+            </div>
+            <div id="ossfile" style="display:none">你的浏览器不支持flash,Silverlight或者HTML5！</div>
+            <pre id="console" style="visibility: hidden"></pre>
+            <div class="explain" id="explain">
+                <span class="symbol"></span>
+                <span class="explain_text" href="#">用户使用说明</span>
+            </div>
+        </div>
+        <!-- 验证页 -->
+
+        <div class="mobile" id='s_mobile'>
+            <!-- <a href="http://leglear.com/soft/index.html">
+                <div style="margin-right: .5rem;">
+                <div class="ad">
+                    <div class="price">除皱</div>
+                    <div class="span">￥699</div>
+                </div>
+                <div class="ad">
+                    <div class="price">脱腋毛</div>
+                    <div class="span">￥699</div>
+                </div>
+                <div class="ad">
+                    <div class="price">玻尿酸</div>
+                    <div class="span">￥199</div>
+                </div>
+                <div class="ad">
+                    <div class="price">综合隆鼻</div>
+                    <div class="span">￥699</div>
+                </div>
+                    <img src="static/mobile/ad1.jpg" alt="" style="width: 92%;margin-right: 1rem;height: 7rem;">
+                    <a href="#" class="button1  bigrounded" style="width:90%;margin-top: 2rem;">在线预约</a>
+                </div>
+            </a> -->
+
+
+            <!--<div id="fsD1" class="focus" style="width: 100%;height:130px;margin-bottom: 4rem;">-->
+                <!--<div id="D1pic1" class="fPic" style="width:100%;height:130px">-->
+                    <!--<div class="fcon" style="display: none;">-->
+                        <!--<a  href="#"><img src="static/ad/01.jpg" style="opacity: 1;width:100% ;height:130px"></a>-->
+                    <!--</div>-->
+
+                    <!--<div class="fcon" style="display: none;">-->
+                        <!--<a  href="#"><img src="static/ad/02.jpg" style="opacity: 1;width:100% ;height:130px"></a>-->
+                    <!--</div>-->
+
+                    <!--<div class="fcon" style="display: none;">-->
+                        <!--<a  href="#"><img src="static/ad/03.jpg" style="opacity: 1; width:100%;height:130px"></a>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+                <!--<div class="fbg">-->
+                    <!--<div class="D1fBt" id="D1fBt">-->
+                        <!--<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>1</i></a>-->
+                        <!--<a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>2</i></a>-->
+                        <!--<a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i>3</i></a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<span class="prev"></span>-->
+                <!--<span class="next"></span>-->
+            <!--</div>-->
+
+            <div class="loading">
+                <div class="loading_pic">
+                    <span></span>
+                </div>
+                <div class="loading_text">
+                    <span>正在上传，请稍后...</span>
+                    <span id='s_complete'>已完成分析！</span>
+                </div>
+            </div>
+            <div class="preresult" id="preresult">
+                <span>综合分析您的皮肤属性为：</span>
+                <span id="preresult_text"></span>
+                <span>需通过手机验证方可查看完整报告。</span>
+            </div>
+            <div class="code">
+                <div class="code_mobile">
+                    <span>手机号码</span>
+                    <input id='s_number' type="number" maxlength="11" minlength="11" placeholder="请输入手机号码">
+                </div>
+                <div class="code_code">
+                    <span>验证码</span>
+                    <input id='s_code' type="number" placeholder="填写验证码">
+                    <button class="get_code" id='get_code'>获取验证码</button>
+                </div>
+            </div>
+            <div class="sure">
+                <button id='sure_btn'>确认</button>
+            </div>
+        </div>
+
+        <div id="shutdown" class="modal fade in animated fadeInDown" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false" style="display: block;">
+            <div class="modal-backdrop fade in"></div>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="dele close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">免责声明</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group group1">
+                                <label for="recipient-name" class="control-label">
+                                    <p>1、保护用户个人信息是我们的一项基本原则，我们将会采取合理的措施保护用户的个人信息。除法律法规规定的情形外，未经用户许可聆歌不会向第三方公开、透露用户个人信息。我们对相关信息采用专业加密存储与传输方式，保障用户个人信息的安全。</p>
+                                    <p>2、你在分享本产品到社交网络的过程中，可能会向愿意分享的个人显示你的照片信息。我们建议你在分享前，请审视你分享的社交网络群体和个人是否对你产生潜在的不可控风险。</p>
+                                    <p>3、 一般情况下，你可随时浏览、修改自己提交的信息，但出于安全性和身份识别（如号码申诉服务）的考虑，你可能无法修改注册时提供的初始注册信息及其他验证信息。</p>
+                                    <p>4、我们将运用各种安全技术和程序建立完善的管理制度来保护你的个人信息，以免遭受未经授权的访问、使用或披露。</p>
+                                    <p>5、 未经你的同意，我们不会向第三方以外的任何公司、组织和个人披露你的个人信息，但法律法规另有规定的除外。</p>
+                                    <p>6、 我们非常重视对未成年人个人信息的保护。若你是18周岁以下的未成年人，在使用聆歌的服务前，应事先取得你家长或法定监护人的书面同意。</p>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer" style="text-align: center">
+                        <button type="button" class="dele btn btn-default submit-message " id="recipient-name">已阅读以上声明</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shutdowns" class="modal fade in animated fadeInDown" id="exampleModals" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false" style="display: none;">
+            <div class="modal-backdrop fade in"></div>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!-- <div class="modal-header noline">
+                        <button type="button" class="dele close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">第一步</h4>
+                    </div> -->
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group group1">
+                                <label for="recipient-name" class="control-label center">
+                                    <h3>第1步</h3>
+                                    <p>点击按钮选择相片或实时拍照,完成选择照片后点击“开始测试”。</p>
+                                    <img src="static/im/step1.jpg" alt="示例1">
+                                    <h3>第2步</h3>
+                                    <p>查看详细报告需要使用手机号码进行验证码获取。弹出验证码框时按步骤填写确认即可。</p>
+                                    <img src="static/im/step2.png" alt="示例2">
+                                    <h3>第3步</h3>
+                                    <p>将报告分享到朋友圈，注意分享时带上自己的照片和测试信息,我们建议你在分享前,请审视你分享的社交网络群体和个人是否对你产生潜在的不可控风险可以点击“在线咨询”,实时查询美容要求。</p>
+                                    <img src="static/im/step3.jpg" alt="示例3">
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer" style="text-align: center">
+                        <button type="button" class="dele btn btn-default submit-message " id="recipient-name">已了解用户说明</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
+    <script src="js/webuploader.custom.min.js"></script>
+    <script type="text/javascript" src="js/plupload.full.min.js"></script>
+    <script type="text/javascript" src="js/upload.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+    $('.gif').click(function() {
+        $(this).css({
+            animation: 'ha2 2s infinite'
+        })
+    })
+
+    $('.dele').click(function() {
+        $('.modal-backdrop').animate({
+            opacity: 0
+        }, 100);
+        $('#shutdown').removeClass('fadeInDown').addClass('fadeOutUp')
+        $('.title').addClass(' animated bounceInDown')
+    })
+
+    $("#explain").click(function() {
+        // console.log(111)
+        $("#shutdowns").css("display", "block");
+        $('.dele').click(function() {
+            // $('.modal-backdrop').animate({opacity:0},100);
+            // $('#shutdowns').removeClass('fadeInDown').addClass('fadeOutUp')
+            // $('.title').addClass(' animated bounceInDown')
+            $("#shutdowns").css("display", "none");
+        })
+    });
+    $(".moxie-shim").css("dispaly","none")
+
+    </script>
+    <script type="text/javascript" src="js/koala.min.1.5.js"></script>
+    <script type="text/javascript">
+    Qfast.add('widgets', { path: "js/terminator2.2.min.js", type: "js", requires: ['fx'] });
+    Qfast(false, 'widgets', function () {
+        K.tabs({
+            id: 'fsD1',   //焦点图包裹id
+            conId: "D1pic1",  //** 大图域包裹id
+            tabId:"D1fBt",
+            tabTn:"a",
+            conCn: '.fcon', //** 大图域配置class
+            auto: 1,   //自动播放 1或0
+            effect: 'fade',   //效果配置
+            eType: 'click', //** 鼠标事件
+            pageBt:true,//是否有按钮切换页码
+            bns: ['.prev', '.next'],//** 前后按钮配置class
+            interval: 3000  //** 停顿时间
+        })
+    })
+</script>
+</body>
+
+</html>

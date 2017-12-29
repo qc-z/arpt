@@ -1,0 +1,258 @@
+body{
+    background: #1D1C22;
+}
+.nav-list li:nth-of-type(3){
+    background: linear-gradient(90deg,#F12C43 ,#EB34A1  );
+    box-shadow: 0 4px 10px #1f1f1f;
+
+}
+
+.nav-list li:nth-of-type(3) a{
+    background-image: url("../images/project2.png");
+    color:#fff;
+    font-weight: bold;
+}
+.part1{
+
+    padding: 0;
+    padding-top:80px;
+    height: auto;
+    position: fixed;
+    z-index: 2;
+    background:#1D1C22;
+
+}
+.shadow2{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index:200s;
+}
+.btn1{
+    background: linear-gradient(90deg,#F12C43 ,#EB34A1  );
+    border-radius:6px;
+    width: 30%;
+    height: 36px;
+    font-size: 1em;
+    color:#fff;
+
+}
+.txt{
+
+    background: #26252A;
+    border-radius:12px;
+    width:65%;
+    height: 36px;
+    font-size: 1em;
+    text-align: center;
+    color:#ccc;
+    box-shadow: 0 4px 10px #000;
+}
+
+#name{
+    background-image: url("../images/project.png");
+    background-position: 25px center;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+#price{
+    background-image: url("../images/price.png");
+    background-position: 25px center;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.btn2{
+    border-radius:6px;
+    width: 30%;
+    height: 36px;
+    font-size: 1em;
+    background: linear-gradient(90deg,#F12C43 ,#EB34A1  );
+    color:#fff;
+}
+
+
+/*  part2  */
+.part2{
+    background: #26252A;
+    margin-top: 8px;
+    box-shadow: 0 4px 10px #000;
+    padding: 10px 0 5px 8px;
+}
+
+.title{
+    color: #ED3283;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 5px;
+    display: block;
+    padding-left: 8px;
+}
+
+.form1{
+
+}
+
+
+
+.mix{
+    float: left;
+    margin-top: 5px;
+    position: relative;
+    margin-right: 10px;
+
+}
+
+.mix button{
+    padding:12px 20px;
+    color:#797979;
+    border-radius:6px;
+    margin-top: 10px;
+    margin-top: 10px;
+    font-size: 1.2em;
+
+    background: linear-gradient(90deg,#F12C43 ,#EB34A1 );
+    color: #fff;
+
+}
+
+
+
+
+.mix .delect{
+    width: 14px;
+    height: 14px;
+    background:url("../images/delect.png");
+    background-size: contain;
+    position: absolute;
+    right:0;
+    top: 6px;
+}
+
+.part2-1{
+    margin-top: 180px;
+}
+
+
+
+
+
+/*   select   */
+
+.select{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0,0,0,0.7);
+    left: 0;
+    top: 0;
+    display: none;
+    z-index:3;
+}
+
+.select button{
+    width: 28%;
+    height: 71px;
+    background: #252429;
+    font-size: 1.2em;
+    margin-right: 6%;
+    border-radius: 0;
+    box-shadow: 0 4px 10px #000;
+    transition: all 2s;
+}
+
+.select button:hover{
+    color:#fff;
+    background: linear-gradient(90deg,#F12C43 ,#EB34A1 );
+}
+
+
+.select-in{
+    padding: 0;
+    color:#fff;
+    margin-top: 50px;
+}
+
+
+.btn2{
+    margin-top: 30px;
+}
+
+.fenlei{
+    margin-top: 128px;
+    display: block;
+    font-weight: bold;
+    color: #ED3283;
+    font-size: 1.6em;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+
+.add{
+    width: 44%;
+    height: 30px;
+    text-align: center;
+    border-radius:10px;
+    background: linear-gradient(90deg,#F12C43 ,#EB34A1 );
+    line-height: 30px;
+    position: fixed;
+    left:29%;
+    top: 300px;
+    color:#fff;
+    display: none;
+}
+
+
+.btn-add{
+    margin-top: 10px;
+}
+
+.select .b3{
+    margin-right: 0;
+}
+.select .b6{
+    margin-right: 0;
+}
+.select .b9{
+    margin-right: 0;
+}
+
+
+.select .b1{
+    border-radius:10px 0 0 0;
+}
+
+.select .b3{
+    border-radius:0 10px 0 0;
+}
+
+.select .b7{
+    border-radius:0 0 0 10px;
+}
+.select .b9{
+    border-radius:0 0 10px 0;
+}
+@media screen and (max-width: 330px) {
+
+    .add{
+        top: 250px;
+    }
+
+    .part2-1 {
+        margin-top: 190px;
+    }
+    .fenlei {
+        margin-top: 91px;
+    }
+    .select button{
+        height: 58px;
+    }
+    .title{
+        font-size: 1.3em;
+    }
+    .mix button {
+        padding: 14px 22px;
+        font-size: 1.5em;
+    }
+}

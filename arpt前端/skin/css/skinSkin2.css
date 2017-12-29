@@ -1,0 +1,156 @@
+/* index.html */
+body,body .conBg{
+  background: #2F2F2F;
+}
+.camera span{
+  background-image: url("../static/index/camera.png");
+}
+.button button span{
+  background-image: url("../static/index/startTest.png");
+  background-size: 100% 100%;
+}
+.explain_text{
+  color: #D0AF2C;
+}
+.mobile{
+  background: #2F2F2F;
+}
+.symbol{
+  background-image: url("../static/index/explain.png");
+}
+.span{
+  background-color: #2f2f2f;
+  color: #eae508;
+}
+.ad{
+  border: 1px solid #D8B324;
+}
+.loading_pic span{
+  background-image: url("../static/mobile/mobile11.png");
+  background-color: transparent;
+}
+.loading_text span:nth-of-type(2){
+  color:#D8B324;
+}
+.price{
+  color:#D8B324;
+}
+.code{
+  color:#ececec;
+}
+#preresult_text{
+  color: #eae707;
+}
+#preresult{
+  color: #D7B224;
+}
+.get_code{
+   /* Firefox 3.6+ */
+ background: -moz-linear-gradient(top, #ECEB05, #D8B324 0%, #ECEB05, #D8B324 100%, #ECEB05);
+ /* Safari 4-5, Chrome 1-9 */
+ background: -webkit-gradient(linear, top bottom, bottom top, from(#ECEB05), color-stop(0.05, #f96), color-stop(0, #ECEB05), color-stop(1, #D8B324), to(#ECEB05));
+ /* Safari 5.1+, Chrome 10+ */
+ background: -webkit-linear-gradient(top, #ECEB05, #D8B324 0%, #ECEB05, #D8B324 100%, #ECEB05);
+ /* Opera 11.10+ */
+ background: -o-linear-gradient(top, #ECEB05, #D8B324 0%, #ECEB05, #D8B324 100%, #ECEB05);
+}
+.code_mobile input,.code_code input{
+  background: transparent;
+}
+.sure button{
+  color: #333;
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #ECEB05, #D8B324 0%, #ECEB05, #D8B324 100%, #ECEB05);
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, top bottom, bottom top, from(#ECEB05), color-stop(0.05, #f96), color-stop(0, #ECEB05), color-stop(1, #D8B324), to(#ECEB05));
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #ECEB05, #D8B324 0%, #ECEB05, #D8B324 100%, #ECEB05);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #ECEB05, #D8B324 0%, #ECEB05, #D8B324 100%, #ECEB05);
+}
+
+
+/* report.html */
+.container-fluid{
+  background: #F2F2E8;
+}
+.total{
+  background: #E0DABA;
+}
+.total_title{
+  color: #3D330F;
+}
+.total_skin_unselect{
+  background: #D8B324;
+  color: #fff;
+}
+
+.total_skin_select{
+  background: #987A02;
+}
+.color_title,.smooth_title,.pimple_title,.skin_title,.pore_title{
+  color: #E9A91E;
+}
+#oil_point, #water_point{
+  color: #987904;
+}
+#color_level{
+  background-image: url(../static/result/result22.png);
+}
+.pimple_text_selected{
+  border-color:#D8B324;
+}
+.smooth_symbol_name,.smooth_text,.skin_face_face,.skin_skin_title,.skin_text,.problem_title,.suggestion,#pimple_text_low,#pimple_text_mid,#pimple_text_hig{
+  color: #D8B324;
+}
+#pimple_level,#skin_level{
+  background: #AA890D;
+  background: -webkit-linear-gradient(left, #987904 , #D7B025); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #987904, #D7B025); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #987904, #D7B025); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #987904 , #D7B025); /* 标准的语法 */
+}
+#pimple_symbol{
+  background-image: url(../static/result/result33.png);
+}
+.smooth_symbol_level2{
+  background-image: url(../static/result/result44.png);
+}
+#skin_symbol{
+  background-image: url(../static/result/result22.png);
+}
+#skin_skin,#problem_value{
+  color:#D65DC6;
+}
+.result_button{
+  background: #D65DC6;
+}
+.map_body{
+  background: #E0DABA;
+}
+.map_title,.map_detail,.copy span{
+  color: #3D340E;
+}
+.footer span{
+  color:#D8B637;
+}
+.footer hr{
+  border-color:#F2CD37;
+}
+.skin-chat{
+  background-image: url(../static/im/skinChat.png);
+}
+.result_button_info{
+  background-color:#FFCF0B;
+  color: #333;
+}
+.alert{
+  background-size: 30px;
+  background-image: url(../static/im/skinPrompt2.png)
+}
+.pimple_level{
+  background-color:#E0DABA;
+}
+.one,.two,.three,.four,.pore{
+  border-color:#D4AC0F;
+}

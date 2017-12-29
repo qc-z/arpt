@@ -1,0 +1,126 @@
+header,.multiply,.detail,.test,.about{
+    background: #fff;
+}
+
+header{
+    background: linear-gradient( #f12c41 , #eb34a6);
+    height: 110px;
+    overflow:  visible ;
+    margin-bottom: 45px;
+
+}
+.pic{
+    top: 53px;
+    left: 11%;
+}
+
+
+.section span{
+    color:#6e7a87;
+}
+.section .block{
+    background: linear-gradient(to right, #f12c41 , #eb34a6)
+}
+
+.symbol{
+    background: #fff;
+    color:#ed3288
+}
+
+.word{
+    color:#fff;
+}
+.color{
+    color:#fff;
+    opacity: 0.7;
+}
+
+
+.point{
+    color:#ed3288;
+}
+.point2{
+    color:#ed3288
+}
+
+
+.title{
+    color:#6e7a87;
+    background: url("../images/title-bg2.png") no-repeat;
+    background-size: contain;
+}
+
+
+.box1 .p-title{
+    color:#6e7a87;
+}
+
+
+.btn{
+    background: linear-gradient(to right, #f12c41 , #eb34a6);
+    color:#fff;
+}
+
+.alert{
+    color:#34495e;
+    font-size:17px;
+    background-position: left top;
+    background: url("../images/alert-bg2.png") no-repeat left top;
+    line-height: 25px;
+}
+
+.a-title{
+    color:#606060;
+    border-bottom: 3px solid #ed3288;
+}
+
+.about p:nth-of-type(1){
+    color:#6e7a87;
+}
+.about p:nth-of-type(2),.about p:nth-of-type(3){
+    color:#34495e;
+}
+
+
+.goal{
+    background: url("../images/icon1-1.png") no-repeat left center;
+    background-size: 30px 30px;
+}
+
+.box2 .goal{
+    background: url("../images/icon2-1.png") no-repeat left center;
+    background-size: 30px 30px;
+}
+.box3 .goal{
+    background: url("../images/icon3-1.png") no-repeat left center;
+    background-size: 30px 30px;
+}
+.box4 .goal{
+    background: url("../images/icon4-1.png") no-repeat left center;
+    background-size: 30px 30px;
+}
+.box5 .goal{
+    background: url("../images/icon5-1.png") no-repeat left center;
+    background-size: 30px 30px;
+}
+
+
+.box .goal{
+    background: url("../images/title-bg2.png") no-repeat left center;
+    background-size:30px 30px;
+}
+
+.box1 .p-title {
+    border-top: 1px solid #e5e5e5;
+}
+
+
+
+
+
+
+
+
+
+
+

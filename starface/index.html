@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="libraries/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libraries/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libraries/js/bootstrap-editable.css">
+    <link href="libraries/css/bootstrap-table.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="libraries/css/bootstrap.offcanvas.min.css">
+    <script src="libraries/js/jquery.min.js"></script>
+    <script src="libraries/js/bootstrap.min.js"></script>
+    <script src="libraries/js/bootstrap-table.min.js"></script>
+    <script src="libraries/js/bootstrap.offcanvas.min.js"></script>
+    <script src="libraries/js/bootstrap-table-zh-CN.min.js"></script>
+    <script src="libraries/js/bootstrap-editable.min.js"></script>
+    <script src="libraries/js/bootstrap-table-editable.js"></script>
+    <link rel="stylesheet" href="libraries/css/jquery-confirm.css">
+    <script src="libraries/js/jquery-confirm.js"></script>
+    <script src="script/bbmis.js"></script>
+    <title>明星管理后台</title>
+
+    <style>
+        .modal .row {
+            padding-bottom: 10px;
+        }
+        /*select*/
+        #country_id_select {
+            /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+            border: solid 1px rgb(219,220,221);
+            height: 34px;
+            border-radius: 5px;
+            /*很关键：将默认的select选择框样式清除*/
+            appearance:none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            /*在选择框的最右侧中间显示小箭头图片*/
+            /*background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll bottom center transparent;*/
+            /*margin-left: 4px;*/
+            /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+            /*padding-left: 10px;*/
+            width: 55px;
+            text-align: center;
+        }
+        a{
+            color: #000000;
+        }
+        /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+        #country_id_select::-ms-expand { display: none; }
+        #img_box{width:150px;height: 150px;border: 1px solid #ccc;font-size: 0;background-size: 100%;background-image: url(shangchuan.png)}
+    </style>
+</head>
+<body>
+<header class="clearfix">
+    <button type="button" class="navbar-toggle offcanvas-toggle" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" id="offcanvas-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+
+    <nav class="navbar navbar-default navbar-offcanvas navbar-offcanvas-touch" role="navigation" id="js-bootstrap-offcanvas">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">明星管理后台</a>
+            </div>
+            <div>
+                <ul id="menu" class="nav navbar-nav">
+                    <li class="active"><a href="index.html">资料管理</a></li>
+                    <li><a href="country.html">地区管理</a></li>
+                </ul>
+
+                <ul id="logout" class="nav navbar-nav navbar-right">
+                    <li onclick="logout()"><a>退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ </header>
+
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-2">
+                    <input class="form-control" type="text" id="search" value=""  placeholder="请输入明星姓名">
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary" onclick="search('name')">搜索</button>
+                    <!-- <select class="btn btn-primary" onchange="search('country_id')" name="country_id_select" id="country_id_select" style="display: inline-block;">
+                        <option value="-1">全部</option>
+                    </select> -->
+                </div>
+                <div class="col-md-offset-6 col-md-2" style="text-align: center">
+                    <button class="btn btn-warning" onclick="addModal('add')">添加</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <table class='table' id="tables">
+            </table>
+        </div>
+
+        <div class="panel-footer" style="display: none">
+            <div class="row">
+                <div class="col-md-2" style="text-align: center">
+                    <h5>共<label id="total_page"></label>页当前第<label id="pagination">1</label>页</h5>
+                </div>
+                <div class="col-md-offset-9">
+                    <div class="row" style="text-align: center">
+                        <div class="col-md-5">
+                            <button class="btn btn-default" id="lastPage" disabled>上一页</button>
+                        </div>
+                        <div class="col-md-5">
+                            <button class="btn btn-default" id="nextPage">下一页</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabe3">添加明星</h4>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-2">
+                            <label>姓名</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input class="form-control" type="text" id="name" value="" placeholder="">
+                        </div>
+
+                        <div class="col-md-2">
+                            <label>性别</label>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control" id="sex">
+                                <option value="0" selected>女</option>
+                                <option value="1">男</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-2">
+                            <label>国籍</label>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-control" id="country">
+                                <option value="1">中国</option>
+                                <option value="2">韩国</option>
+                                <!-- <option value="3">马来西亚</option>
+                                <option value="4">美国</option>
+                                <option value="5">新加坡</option> -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-2">
+                            <label>介绍</label>
+                        </div>
+                        <div class="col-md-9">
+                            <textarea class="form-control" id="introduction"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-2">
+                            <label>图片</label>
+                        </div>
+                        <div class="col-md-9" id="container">
+                            <div class="col-md-6">
+                                <label class="img" id="img_box"></label>
+
+                            </div>
+                            <div id="ossfile">你的浏览器不支持flash,Silverlight或者HTML5！</div>
+                            <pre id="console" style="display: none;"></pre>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="addSubmit">确认</button>
+                    <button type="button" class="btn btn-danger" id="updateSubmit">修改</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="libraries/js/iscroll-zoom.js"></script>
+<script src="libraries/js/hammer.js"></script>
+<script src="libraries/js/lrz.all.bundle.js"></script>
+<script src="libraries/js/jquery.photoClip.js"></script>
+<script src="js/lib/plupload-2.1.2/js/plupload.full.min.js"></script>
+<script src="js/upload.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

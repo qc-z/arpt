@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ARPT总裁管理后台系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+    <link rel="stylesheet" href="css/mycss-change.css">
+    <link rel="stylesheet" href="css/5.css">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+</head>
+<body>
+
+<div class="container-fluid">
+    <nav class="navbar navbar-inverse navbar-fixed-top animated" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:;">ARPT总裁管理系统</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="basic-message.html">基本信息</a></li>
+                    <li><a href="customer-list.html">客户列表</a></li>
+                    <li><a href="project-management.html">项目管理</a></li>
+                    <li><a href="data-manage.html">流量统计</a></li>
+                    <li><a href="tools.html">拓客工具</a></li>
+                    <li><a href="upload.html">广告图片管理</a></li>
+                    <li><a href="account-change.html">修改密码</a></li>
+                    <li><a href="#" class="s_signout">退出</a></li>
+                </ul>
+                <!--<form class="navbar-form navbar-right">-->
+                <!--<input type="text" class="form-control" placeholder="Search...">-->
+                <!--</form>-->
+            </div>
+        </div>
+    </nav>
+    <div class="nav-show">
+        <div class="nav-shadow"></div>
+        <div class=" col-sm-3 col-sm-offset-9 col-xs-5 col-xs-offset-7 nav-you">
+            <div class="logo">
+                <div class="col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 pic">
+
+                </div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="basic-message.html">基本信息</a></li>
+                <li><a href="customer-list.html">客户列表</a></li>
+                <li><a href="project-management.html">项目管理</a></li>
+                <li><a href="data-manage.html">流量统计</a></li>
+                <li><a href="tools.html">拓客工具</a></li>
+                <li><a href="upload.html" style="padding-left: 2rem;">广告图片管理</a></li>
+                <li><a href="account-change.html">修改密码</a></li>
+                <li><a href="#" class="s_signout">退出</a></li>
+                <li><span>2016-2017@ARPT v1.2.6</span></li>
+            </ul>
+            <!--<p>2016-2017@ARPT</p>-->
+            <!--<p>v1.0</p>-->
+        </div>
+    </div>
+
+    <div class="row all" style="height: 80px">
+        <div id="main" style="width: 100%;height:100%;"></div>
+    </div>
+
+</div>
+<div class="container animated fadeInUp">
+    <!--data-url="thispage/listpage"-->
+    <span class="data_title">客户流量统计</span>
+    <div id="s_ctrl">
+        <input type="date" id="s_input" placeholder="请选择查询日期"/>
+        <button id="s_button">刷新</button>
+    </div>
+
+    <table id="table"
+           data-toggle="table"
+           data-ajax="ajax(data)"
+           data-method="post"
+           data-ajax-options="{}"
+           data-show-columns="false"
+           data-search="false"
+           data-show-refresh="false"
+           data-show-toggle="false">
+        <thead>
+        <tr>
+            <th data-field="time" data-formatter="idFormatter">日期</th>
+            <th data-field="count">人数</th>
+            <th data-field="facecount">颜值测试</th>
+            <th data-field="skinCount">皮肤测试</th>
+            <th data-field="starCount">明星面对面</th>
+            <th data-field="toTheStore">到店</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+<script src="script/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script src="script/bbmis.js"></script>
+<script src="layer/layer.js"></script>
+<script src="js/myjs.js"></script>
+<script src="js/echarts.common.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script type="text/javascript">
+
+    function init() {
+        $.ajax({
+            type: "GET",
+            url: serve + "/clientGetCountData",
+            dataType: 'json',
+            data: {
+                clientId: localStorage.getItem('clientId'),
+                queryDate: ''
+            },
+            xhrFields: {
+                withCredentials: true
+            },
+            success: function (res) {
+                console.log(res)
+
+                if (res.code == 1 && res.err == 'OK') {
+                    var chartdata = [];
+                    var date = [];
+                    Object.keys(res.obj).forEach(function (x) {
+                        date.push(res.obj[x][0]);
+                    });
+                    //setChart(chartdata);
+                    console.log(date)
+                    $('#table').bootstrapTable('destroy').bootstrapTable({
+                        data: date
+                    });
+                }
+            }
+        });
+    }
+
+    init();
+    $('#s_button').unbind('click').click(init);
+
+    $('#s_input').unbind('change').change(function (e) {
+        var temp = $(e.target).val().replace(/-/g, '/');
+        $.ajax({
+            type: "GET",
+            url: serve + "/clientGetCountData",
+            dataType: 'json',
+            data: {
+                clientId: localStorage.getItem('clientId'),
+                queryDate: temp
+            },
+            xhrFields: {
+                withCredentials: true
+            },
+            success: function (res) {
+                console.log(res)
+                if (res.code == 1 && res.err == 'OK') {
+                    var date = [];
+                    Object.keys(res.obj).forEach(function (x) {
+                        date.push(res.obj[x][0]);
+                    });
+                    console.log(date);
+                    $('#table').bootstrapTable('destroy').bootstrapTable({
+                        data: date
+                    });
+                }
+            }
+        });
+    });
+
+
+    //设置图表
+    function setChart(chartdata) {
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        // 指定图表的配置项和数据
+        option = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            grid: {
+                x: 60
+            },
+            textStyle: {
+                //设置颜色
+                color: '#fff',
+                fontSize: 14,
+                label: {
+                    position: 'bottom'
+                }
+            },
+            itemStyle: {
+                //通常情况下：
+                normal: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#F12C43'},
+                            {offset: 1, color: '#EB34A1'}
+                        ]
+                    )
+                },
+                //鼠标悬停时：
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+            //legend: {
+            //data: ['蒸发量']
+            //},
+            toolbox: {
+                show: false,
+                feature: {
+                    mark: {show: true},
+                    dataView: {show: true, readOnly: false},
+                    magicType: {show: true, type: ['line', 'bar']},
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            calculable: true,
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['今天客户', '七天平均客户']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '新客户',
+                    type: 'bar',
+                    data: chartdata,
+                    markPoint: {
+                        data: [
+                            {type: 'max', name: '最大值'},
+                            {type: 'min', name: '最小值'}
+                        ]
+                    }
+
+                }
+
+            ]
+
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    }
+
+</script>
+
+
+<script>/*
+ $(function () {
+ $('#build').click(build);//.trigger('click');
+ $('#cells, #rows').keyup(function (e) {
+ if (e.keyCode === 13) {
+ build();
+ }
+ });
+ buildDemo();
+ });
+ */
+/*function build() {
+    var cells = $('#cells').val(),
+        rows = $('#rows').val(),
+        i, j, row,
+        columns = [],
+        data = [];
+
+    for (i = 0; i < cells; i++) {
+        columns.push({
+            field: 'field' + i,
+            title: 'Cell' + i
+        });
+    }
+    for (i = 0; i < rows; i++) {
+        row = {};
+        for (j = 0; j < cells; j++) {
+            row['field' + j] = 'Row-' + i + '-' + j;
+        }
+        data.push(row);
+    }
+
+    $('#table').bootstrapTable('destroy').bootstrapTable({
+        columns: columns,
+        data: data
+    });
+}*/
+
+//    function idFormatter(value) {
+//        return value + 100;
+//    }
+
+//定义伪随机数种子
+//Math.seedrandom('fuck');
+/*function buildDemo() {
+    var data = [];
+    var curDate = moment();
+    //计算日期之差
+    var diffday = parseInt(moment().diff(moment("2017-2-20"), 'days'));
+    var t = diffday;
+    console.log(diffday);
+    //按照指定日期至今的天数进行循环处理
+    while (t > 0) {
+        var tmp = {};
+        //日期格式化
+        tmp.date = curDate.format("YYYY-MM-DD");
+        //操作数据pageview
+        tmp.pageview = Math.floor(Math.random() * 100 + 400 + 15000 / diffday * t);
+        //操作数据arrive
+        tmp.arrive = Math.floor(Math.random() * 10 + 40 + 800 / diffday * t);
+        //塞入数组
+        data.push(tmp);
+
+        //操作时间
+        curDate = curDate.add(-1, "days");
+        //操作循环变量
+        t--;
+    }
+    console.log(data);
+    $('#table').bootstrapTable('destroy').bootstrapTable({
+        data: data
+    });
+}*/
+//buildDemo()
+</script>
+<script>
+    // Sets Math.random to a PRNG initialized using the given explicit seed.
+    //    Math.seedrandom('hello.');
+    //    console.log(Math.random());          // Always 0.9282578795792454
+    //    console.log(Math.random());          // Always 0.3752569768646784
+    //    req('getCustomer',{uuid:getQueryStringByName('uuid')},function (result) {
+    //        console.log(data)
+    //    });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

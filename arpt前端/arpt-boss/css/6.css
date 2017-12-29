@@ -1,0 +1,82 @@
+body {
+    background: #1D1C22;
+}
+
+.nav-list li:nth-of-type(6) {
+    background: linear-gradient(90deg, #F12C43, #EB34A1);
+    box-shadow: 0 4px 10px #1f1f1f;
+
+}
+
+/*.nav-list li:nth-of-type(5) a {*/
+    /*background-image: url("../images/account-change2.png");*/
+    /*background-position: 15px center;*/
+    /*background-size: 26px 26px;*/
+    /*background-repeat: no-repeat;*/
+    /*color: #fff;*/
+    /*font-weight: bold;*/
+/*}*/
+
+.row1 {
+    margin-top: 100px;
+}
+
+.row1 .title {
+    font-size: 21px;
+    text-align: center;
+    color: #ccc;
+}
+
+.middle {
+    height: 339px;
+    background: #26252A;
+    display: block;
+    box-shadow: 0 4px 10px #000;
+}
+
+.b-tn {
+    margin-top: 83px;
+}
+
+@media screen and (max-width: 330px) {
+    .middle {
+        height: 299px;
+    }
+
+    .b-tn {
+        margin-top: 48px;
+    }
+
+}
+
+@media screen and (min-width: 500px) {
+    .middle {
+        margin-top: 240px;
+    }
+
+    .b-tn {
+        /*        margin-top: 95px;
+                font-size: 21px;
+                width: 25%;
+                margin-left: 38%;*/
+        margin-top: 53px;
+        font-size: 16px;
+        width: 40%;
+        margin-left: 28%;
+    }
+
+}
+
+/*sam*/
+.c_b-tn {
+    background: linear-gradient(90deg, #F12C43, #EB34A1);
+    margin-top: 37px;
+    border-radius: 36px;
+    font-size: 1em;
+    height: 47px;
+    box-shadow: none;
+    color: #fff;
+    font-weight: bold;
+    width: 50%;
+    /* margin-left: 25%; */
+}

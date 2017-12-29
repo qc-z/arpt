@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ARPT总裁管理后台系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="js/webuploader.css">
+    <link rel="stylesheet" href="css/mycss-change.css">
+    <link rel="stylesheet" href="css/2.css">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+</head>
+<body>
+<style>
+    .nav-list li:nth-of-type(1) {
+        background: linear-gradient(90deg, #F12C43, #EB34A1);
+        box-shadow: 0 4px 10px #1f1f1f;
+
+    }
+
+    .nav-list li:nth-of-type(1) a {
+        background-image: url("./images/basic2.png");
+        color: #fff;
+        font-weight: bold;
+    }
+</style>
+
+<div class="container-fluid">
+    <nav class="navbar navbar-inverse navbar-fixed-top animated" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:;">ARPT总裁管理系统</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="basic-message.html">基本信息</a></li>
+                    <li><a href="customer-list.html">客户列表</a></li>
+                    <li><a href="project-management.html">项目管理</a></li>
+                    <li><a href="data-manage.html">流量统计</a></li>
+                    <li><a href="tools.html">拓客工具</a></li>
+                    <li><a href="upload.html">广告图片管理</a></li>
+                    <li><a href="account-change.html">修改密码</a></li>
+                    <li><a href="#" class="s_signout">退出</a></li>
+                </ul>
+                <!--<form class="navbar-form navbar-right">-->
+                <!--<input type="text" class="form-control" placeholder="Search...">-->
+                <!--</form>-->
+            </div>
+        </div>
+    </nav>
+    <div class="nav-show">
+        <div class="nav-shadow"></div>
+        <div class=" col-sm-3 col-sm-offset-9 col-xs-5 col-xs-offset-7 nav-you">
+            <div class="logo">
+                <div class="col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 pic">
+
+                </div>
+            </div>
+            <ul class="nav-list ">
+                <li><a href="basic-message.html">基本信息</a></li>
+                <li><a href="customer-list.html">客户列表</a></li>
+                <li><a href="project-management.html">项目管理</a></li>
+                <li><a href="data-manage.html">流量统计</a></li>
+                <li><a href="tools.html">拓客工具</a></li>
+                <li><a href="upload.html" style="padding-left: 2rem;">广告图片管理</a></li>
+                <li><a href="account-change.html">修改密码</a></li>
+                <li><a href="#" class="s_signout">退出</a></li>
+                <li><span>2016-2017@ARPT v1.2.6</span></li>
+            </ul>
+            <!--<p>2016-2017@ARPT</p>-->
+            <!--<p>v1.0</p>-->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="part1">
+            <span class="part1-in"></span>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 part2">
+            <p class=" col-xs-10 col-xs-offset-1"><span class="hl">当前客户等级：</span><span id="level"></span></p>
+            <p class=" col-xs-10 col-xs-offset-1"><span class="hl">店铺名称：</span><span id="shopname"></span></p>
+            <p class=" col-xs-10 col-xs-offset-1"><span class="hl">我的地址：</span><span id="shopaddress"></span></p>
+            <p class=" col-xs-10 col-xs-offset-1"><span class="hl">我的介绍:</span> <span class="openup">+</span> <span
+                    id="introduction"></span></p>
+        </div>
+        <a type="button" class="col-xs-3  col-xs-offset-2 col-md-2 col-md-offset-3 animated fadeInLeft tele" id="tele"
+           href="">打电话给客户经理</a>
+        <button type="button" id="btn-modal-create"
+                class="col-xs-3 col-xs-offset-2 col-md-2 col-md-offset-2 animated fadeInRight tele service"
+                data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">修改基本信息
+        </button>
+
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">基本信息</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group group1">
+                                <label class="control-label">店铺名称:</label>
+                                <input type="text" class="form-control" id="myshopname">
+                            </div>
+                            <div class="form-group group2">
+                                <label class="control-label">我的地址:</label>
+                                <input type="text" class="form-control" id="myaddress">
+                            </div>
+                            <div class="form-group group2">
+                                <label class="control-label">我的介绍:</label>
+                                <textarea class="form-control" id="myintroduction"></textarea>
+                            </div>
+                            <div class="form-group group2 group3">
+                                <label class="control-label">我的公众号二维码:</label>
+                                <div style="overflow:hidden">
+                                    <div id="qrcode">
+                                        <img width="100%" height="100%" id="qc" src="">
+                                        <p id="result1"></p>
+                                        <p id="name1"></p>
+                                    </div>
+                                    <!--<div id="filePicker1"><button  type="button" class="btn btn-primary upload">上传</button></div>-->
+                                    <div id="uploader-demo">
+                                        <!--用来存放item-->
+                                        <div id="fileList" class="uploader-list"></div>
+                                        <div id="filePicker">选择图片</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group group2 group3">
+                                <label class="control-label">我的LOGO:</label>
+                                <div id="logo">
+                                    <img src="" width="100%" height="100%" id="lg">
+                                    <p id="result"></p>
+                                    <p id="name"></p>
+                                </div>
+                                <!--   <div id="filePicker2"><button type="button" class="btn btn-primary upload">上传</button></div>-->
+                                <div id="uploader-demo2">
+                                    <!--用来存放item-->
+                                    <div id="fileList2" class="uploader-list"></div>
+                                    <div id="filePicker2">选择图片</div>
+                                </div>
+
+                            </div>
+                            <div class="form-group group2 group4">
+                                <label class="control-label">我的客服电话:</label>
+                                <input type="text" class="form-control" id="myphone">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary submit-message" data-dismiss="modal">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="script/jquery.js"></script>
+<script src="js/webuploader.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="script/bbmis.js"></script>
+<script src="layer/layer.js"></script>
+<script src="js/myjs.js"></script>
+<!--    <script src="js/up.js"></script>-->
+<!--<script>-->
+<!--var inputElement = document.getElementById("inputField");-->
+<!--console.log(inputElement);-->
+<!--inputElement.addEventListener("change", handleFiles, false);-->
+<!--function handleFiles() {-->
+<!--var fileList = this.files;-->
+<!--alert(this.files.length)-->
+<!--}-->
+<!--</script>-->
+<script>
+    var imgurl1 = 0;
+    var imgurl2 = 0;
+    ;(function () {
+        //打开对话框
+        var uploader = null;
+        $('#btn-modal-create').click(function () {
+            $("#myModal").modal('show');
+        });
+
+        $("#myModal").on("shown.bs.modal", function () {
+            $(function () {
+
+                uploader = WebUploader.create({
+                    // 选完文件后，是否自动上传。
+                    auto: true,
+                    // swf文件路径
+                    swf: 'js/Uploader.swf',
+                    // 文件接收服务端。
+                    server: serve + '/clientImg',
+                    // 选择文件的按钮。可选。
+                    // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+                    pick: '#filePicker',
+                    // 只允许选择图片文件。
+                    accept: {
+                        title: 'Images',
+                        extensions: 'gif,jpg,jpeg,bmp,png',
+                        mimeTypes: 'image/*'
+                    },
+                    formData: {
+                        data: JSON.stringify({"type": "qrcode", "clientId": localStorage.getItem('clientId')})
+                    },
+                    compress: {
+                        width: 500,
+                        height: 500,
+                        // 图片质量，只有type为`image/jpeg`的时候才有效。
+                        quality: 90,
+                        // 是否允许放大，如果想要生成小图的时候不失真，此选项应该设置为false.
+                        allowMagnify: false,
+                        // 是否允许裁剪。
+                        crop: false,
+                        // 是否保留头部meta信息。
+                        preserveHeaders: true,
+                        // 如果发现压缩后文件大小比原来还大，则使用原来图片
+                        // 此属性可能会影响图片自动纠正功能
+                        noCompressIfLarger: false,
+                        // 单位字节，如果图片大小小于此值，不会采用压缩。
+                        compressSize: 0
+                    }
+                });
+                //
+                uploader.on('fileQueued', function (file) {
+                    $('#name1').fadeIn().html(file.id);
+                    // $list为容器jQuery实例
+                    // $('#fileList2').append( $li );
+
+                    // 创建缩略图
+                    // 如果为非图片文件，可以不用调用此方法。
+                    // thumbnailWidth x thumbnailHeight 为 100 x 100
+                    uploader.makeThumb(file, function (error, src) {
+                        if (error) {
+                            $img.replaceWith('<span>不能预览</span>');
+                            return;
+                        }
+                        $('#qc').attr('src', src);
+//                        console.log(src);
+                    }, 300, 300);
+
+
+                });
+                uploader.on('uploadProgress', function (file, percentage) {
+                });
+                // 文件上传成功，给item添加成功class, 用样式标记上传成功。
+                uploader.on('uploadSuccess', function (file, response) {
+                    $('#result1').fadeIn().text('上传成功');
+                    imgurl1 = response.filename;
+
+
+                });
+                // 文件上传失败，显示上传出错。
+                uploader.on('uploadError', function (file) {
+                    $('#result1').fadeIn().text('上传失败').css({background: 'rgba(220,20,60,0.6)'});
+                });
+                // 完成上传完了，成功或者失败，先删除进度条。
+                uploader.on('uploadComplete', function (file) {
+                    $('#' + file.id).find('.progress').remove();
+                });
+            })
+        });
+        $('#myModal').on('hide.bs.modal', function () {
+            $("#responeseText").text("");
+            uploader.destroy();
+        });
+
+    })();
+    ;(function () {
+        var uploader = null;
+        $('#btn-modal-create').click(function () {
+            //打开对话框
+            $("#myModal").modal('show');
+        });
+        $("#myModal").on("shown.bs.modal", function () {
+
+            uploader = WebUploader.create({
+
+                // 选完文件后，是否自动上传。
+                auto: true,
+
+                // swf文件路径
+                swf: 'js/Uploader.swf',
+                // 文件接收服务端。
+                server: serve + '/clientImg',
+
+                // 选择文件的按钮。可选。
+                // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+                pick: '#filePicker2',
+
+                // 只允许选择图片文件。
+                accept: {
+                    title: 'Images',
+                    extensions: 'gif,jpg,jpeg,bmp,png',
+                    mimeTypes: 'image/!*'
+                },
+                formData: {
+                    data: JSON.stringify({"type": "logo", "clientId": localStorage.getItem('clientId')})
+                }
+            });
+
+
+            uploader.on('fileQueued', function (file) {
+                $('#name').fadeIn().html(file.id);
+                // $list为容器jQuery实例
+                // $('#fileList2').append( $li );
+
+                // 创建缩略图
+                // 如果为非图片文件，可以不用调用此方法。
+                // thumbnailWidth x thumbnailHeight 为 100 x 100
+                uploader.makeThumb(file, function (error, src) {
+                    if (error) {
+                        $img.replaceWith('<span>不能预览</span>');
+                        return;
+                    }
+                    $('#lg').attr('src', src);
+                    console.log(src);
+                }, 300, 300);
+            });
+            uploader.on('uploadProgress', function (file, percentage) {
+            });
+            // 文件上传成功，给item添加成功class, 用样式标记上传成功。
+            uploader.on('uploadSuccess', function (file, response) {
+                $('#result').fadeIn().text('上传成功');
+                imgurl2 = response.filename;
+            });
+            // 文件上传失败，显示上传出错。
+            uploader.on('uploadError', function (file) {
+                $('#result').fadeIn().text('上传失败').css({background: 'rgba(220,20,60,0.6)'});
+            });
+            // 完成上传完了，成功或者失败，先删除进度条。
+            uploader.on('uploadComplete', function (file) {
+                $('#' + file.id).find('.progress').remove();
+            });
+        });
+        $('#myModal').on('hide.bs.modal', function () {
+            $("#responeseText").text("");
+            uploader.destroy();
+        });
+
+
+    })();
+
+    $.get(serve + '/clientGetInfo?clientId=' + localStorage.getItem('clientId'), function (res) {
+        console.log(res);
+        var result = res.client;
+        // 判断有没有client信息，没有则弹出填写框
+        if(result.shopName && result.shopAddr && result.customerInfo && result.phoneNumber && result.logo && result.qrcode){
+        }else{
+            $("#myModal").modal('show');
+        }
+
+        localStorage.setItem('base_info', JSON.stringify(result));
+        $('#level').html(result.level === 1 ? 'VIP' : '普通');
+        $('#shopname').html(result.shopName);
+        $('#shopaddress').html(result.shopAddr);
+        $('#introduction').html(result.customerInfo);
+        $('#tele').attr('href', 'tel:' + result.phoneNumber);
+        $('#myshopname').val(result.shopName);
+        $('#myaddress').val(result.shopAddr);
+        $('#myintroduction').val(result.customerInfo);
+        $('#myphone').val(result.phoneNumber);
+
+        $('#qrcode').css({'background-image': 'url('+ serve +'/'+ result.qrcode + ')'});
+
+        $('#logo').css({'background-image': 'url('+ serve +'/'+ result.logo + ')'});
+
+        var level1 = result.level;
+        var qrcode1 = result.qrcode;
+        var logo1 = result.logo;
+
+
+        $('.submit-message').click(function () {
+            var myshopname = $('#myshopname').val();
+            var myaddress = $('#myaddress').val();
+            var myintroduction = $('#myintroduction').val();
+            var myphone = $('#myphone').val();
+            var mylogo = 0;
+            var myqrcode = 0;
+            if (imgurl2 != 0) {
+                var mylogo = imgurl2;
+            } else {
+                var mylogo = logo1;
+            }
+            if (imgurl1 != 0) {
+                var myqrcode = imgurl1;
+            } else {
+                var myqrcode = qrcode1;
+            }
+
+            console.log(mylogo);
+            console.log(myqrcode);
+            $.post(serve + '/editInfo', {
+                shopName: myshopname,
+                shopAddr: myaddress,
+                customerInfo: myintroduction,
+                mobile: result.mobile,
+                phoneNumber: myphone,
+                autoReply: '',
+                logo: '',
+                qrcode: '',
+                customerAd: ''
+            }, function (data) {
+                console.log(data);
+                if (myshopname != 0) {
+                    $('#shopname').html(myshopname);
+                }
+                if (myaddress != 0) {
+                    $('#shopaddress').html(myaddress);
+                }
+                if (myintroduction != 0) {
+                    $('#introduction').html(myintroduction);
+                }
+                if (myphone != 0) {
+                    $('#tele').attr('href', 'tel:' + myphone);
+                }
+            })
+        })
+
+    });
+    $('.openup').click(function () {
+        var theight = 0;
+        $('.part2 span#introduction').height();
+        if ($(this).html() == '+') {
+            /*$('.part2 span#introduction').css({height:'auto'}).hide().slideDown();*/
+            $('.part2 span#introduction').animate({maxHeight: 1000});
+            $(this).html('-');
+        } else {
+            $('.part2 span#introduction').animate({maxHeight: 105});
+            $(this).html('+');
+        }
+    })
+</script>
+</body>
+</html>
+
+
+
+

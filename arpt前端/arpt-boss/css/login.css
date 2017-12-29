@@ -1,0 +1,101 @@
+.register {
+    background: linear-gradient(90deg, #F12C43, #EB34A1);
+    margin-top: 5px;
+    border-radius: 36px;
+    font-size: 1em;
+    height: 47px;
+    box-shadow: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.r_first {
+    margin-top: 5px;
+}
+
+.r_first .col-md-6 > input {
+    background-image: url("../images/account.png");
+    background-size: 20px 20px;
+    background-color: rgba(0, 0, 0, 0.01);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.r_first .col-md-6 a {
+    color: #ccc;
+}
+
+.r_second {
+    margin-top: 5px;
+}
+
+.r_second .col-md-6 > input {
+    background-image: url("../images/password.png");
+    background-color: rgba(0, 0, 0, 0.01);
+    padding-left: 0;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    text-align: center;
+    font-size: 14px;
+}
+
+.r_second .col-md-6 a {
+    color: #ccc;
+}
+
+.r_three {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.r_three .col-md-4 > input {
+    background-color: rgba(0, 0, 0, 0.01);
+    padding-left: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.r_three .col-md-4 a {
+    color: #ccc;
+}
+
+.r_b-tn {
+    background: linear-gradient(90deg, #F12C43, #EB34A1);
+    border-radius: 36px;
+    height: 47px;
+    box-shadow: none;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+    width: 30%;
+    margin-left: 12.5%;
+}
+
+.g_b-tn {
+    background: linear-gradient(90deg, #F12C43, #EB34A1);
+    border-radius: 36px;
+    height: 47px;
+    box-shadow: none;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 60px;
+    font-size: 16px;
+    width: 30%;
+    margin-left: 12.5%;
+}
+
+#getCode, #g_getCode {
+    height: 100%;
+    background: linear-gradient(90deg, #F12C43, #EB34A1);
+    border-radius: 5px;
+    box-shadow: none;
+    color: #fff;
+    font-size: 5px;
+    padding: 8px;
+}
+

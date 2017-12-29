@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ARPT总裁管理后台系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/mycss-change.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+</head>
+<body>
+<div class="black"></div>
+<div class="container-fluid">
+
+    <div class="row animated fadeIn">
+        <div class="r-logo col-xs-8 col-xs-offset-2">
+            <div class="r-icon"></div>
+            <div class="r-word"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2 middle">
+            <!--登录-->
+            <div id="loginform" class="form-horizontal" style="display: none">
+                <div class="form-group first">
+                    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                        <input class="form-control" id="username" placeholder="请输入账号" name="username">
+                    </div>
+                </div>
+                <div class="form-group second">
+                    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                        <input type="password" class="form-control" id="password" placeholder="请输入密码" name="password">
+                    </div>
+                </div>
+                <div class="form-group second">
+                    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                        <a href="#" id="forgetPassword">忘记密码</a>
+                    </div>
+                </div>
+                <button type="button" class="b-tn" id="b-tn">登 录</button>
+                <button type="button" class="b-tn" id="b-tn_b">返 回</button>
+            </div>
+            <!--注册表单-->
+            <div id="registerform"  class="form-horizontal" style="display: none">
+                <p class="reg-alert">请联系客服注册！</p>
+                <button type="button" class="r_b-tn" id="r_b-tn_b">返 回</button>
+            </div>
+            <!-- <div id="registerform" class="form-horizontal" style="display: none">
+                <div class="form-group r_first">
+                    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                        <input class="form-control" id="r_username" placeholder="请输入账号">
+                    </div>
+                </div>
+                <div class="form-group r_second">
+                    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                        <input type="text" class="form-control" id="r_mobile" placeholder="请输入手机">
+                    </div>
+                </div>
+                <div class="form-group r_second">
+                    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                        <input type="password" class="form-control" id="r_password" placeholder="请输入密码">
+                    </div>
+                </div>
+                <div class="form-group r_second">
+                    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                        <input type="password" class="form-control" id="r_conformPassword" placeholder="请输入密码">
+                    </div>
+                </div>
+                <div class="form-group r_three">
+                    <div class="col-md-4 col-md-offset-3 col-xs-6 col-xs-offset-1">
+                        <input type="text" class="form-control" id="r_code" placeholder="验证码">
+                    </div>
+                    <div class="col-md-2 col-xs-5">
+                        <button id="getCode">验证码</button>
+                    </div>
+                </div>
+                <button type="button" class="r_b-tn" id="r_b-tn">注 册</button>
+                <button type="button" class="r_b-tn" id="r_b-tn_b">返 回</button>
+            </div> -->
+            <!--忘记密码-->
+            <div id="getbackform" class="form-horizontal" style="display: none">
+                <!--<div class="form-group r_first">-->
+                <!--<div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">-->
+                <!--<input class="form-control" id="g_username" placeholder="请输入账号">-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="form-group r_first">
+                    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                        <input type="text" class="form-control" id="g_mobile" placeholder="请输入手机">
+                    </div>
+                </div>
+                <div class="form-group r_second">
+                    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                        <input type="password" class="form-control" id="g_password" placeholder="请输入密码">
+                    </div>
+                </div>
+                <div class="form-group r_second">
+                    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+                        <input type="password" class="form-control" id="g_conformPassword" placeholder="请输入密码">
+                    </div>
+                </div>
+                <div class="form-group r_three">
+                    <div class="col-md-4 col-md-offset-3 col-xs-6 col-xs-offset-1">
+                        <input type="text" class="form-control" id="g_code" placeholder="验证码">
+                    </div>
+                    <div class="col-md-2 col-xs-5">
+                        <button id="g_getCode">验证码</button>
+                    </div>
+                </div>
+                <button type="button" class="g_b-tn" id="g_b-tn">提 交</button>
+                <button type="button" class="g_b-tn" id="g_b-tn_b">返 回</button>
+
+            </div>
+
+
+        </div>
+        <button class="signup col-xs-4 col-xs-offset-4">登录帐号</button>
+        <button class="register col-xs-4 col-xs-offset-4">注册帐号</button>
+
+    </div>
+</div>
+
+<script src="script/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="layer/layer.js"></script>
+<script src="script/bbmis.js"></script>
+<script src="js/myjs.js"></script>
+<script>
+    $('#forgetPassword').click(function (e) {
+        $('#loginform').hide();
+        $('#getbackform').show();
+    });
+    $('#b-tn').click(function () {
+        var username = $("#username").val();
+        var password = $("#password").val();
+        if (username === "") {
+            layer.alert('用户名不能为空！');
+            return;
+        }
+        if (password === "") {
+            layer.alert('密码不能为空！');
+            return;
+        }
+        $.ajax({
+            type: "POST",
+            url: serve + "/clientLogin",
+            dataType: 'json',
+            data: {username: username, password: password},
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success: function (res) {
+                console.log(res);
+                if ((res.code === 1 && res.err === 'ok') || (res.code === 0 && res.err === '用户已登录')) {
+                    $("#username").val('');
+                    $("#password").val('');
+                    layer.msg('登录成功', {icon: 1});
+                    if (res.code === 1) {
+                        localStorage.setItem('clientId', res.clientId);
+                    }
+                    location.href = "basic-message.html";
+                } else {
+                    layer.alert(res.err);
+                }
+            },
+            error: function () {
+            }
+        });
+    });
+
+    $('.signup').click(function () {
+        if ($(window).width() > 330 && $(window).width() < 500) {
+            $('.middle').show().addClass('animated fadeInUp');
+            $('.r-logo').animate({'margin-top': '50px', 'height': 140});
+            $(this).hide();
+            $('#loginform').show();
+            $('.register').hide();
+            $('.name').hide();
+            $('.r-icon').animate({left: '-27%', top: '30px'});
+            $('.r-word').animate({left: '20%', top: '-20px'})
+        } else if ($(window).width() < 330) {
+            $('.middle').show().addClass('animated fadeInUp');
+            $('.r-logo').animate({'margin-top': '40px', 'height': 130});
+            $(this).hide();
+            $('#loginform').show();
+            $('.register').hide();
+            $('.name').hide();
+            $('.r-icon').animate({left: '-31%', top: '30px'});
+            $('.r-word').animate({left: '22%', top: '-20px'})
+        } else if ($(window).width() > 1652) {
+            $('.middle').show().addClass('animated fadeInUp');
+            $('.r-logo').animate({'margin-top': '30px', 'height': 160});
+            $(this).hide();
+            $('#loginform').show();
+            $('.register').hide();
+            $('.name').hide();
+            $('.r-icon').animate({left: '-21%', top: '30px'});
+            $('.r-word').animate({left: '12%', top: '-51px'})
+        } else {
+            $('.middle').show().addClass('animated fadeInUp');
+            $('.r-logo').animate({'margin-top': '50px', 'height': 160});
+            $(this).hide();
+            $('#loginform').show();
+            $('.register').hide();
+            $('.name').hide();
+            $('.r-icon').animate({left: '-40%', top: '30px'});
+            $('.r-word').animate({left: '25%', top: '-34px'});
+        }
+    });
+
+    $('.register').click(function () {
+        if ($(window).width() > 330 && $(window).width() < 500) {
+            $('.middle').show().addClass('animated fadeInUp');
+            $('.r-logo').animate({'margin-top': '50px', 'height': 140});
+            $(this).hide();
+            $('#registerform').show();
+            $('.signup').hide();
+            $('.name').hide();
+            $('.r-icon').animate({left: '-27%', top: '30px'});
+            $('.r-word').animate({left: '20%', top: '-20px'})
+
+        } else if ($(window).width() < 330) {
+            $('.middle').show().addClass('animated fadeInUp');
+            $('.r-logo').animate({'margin-top': '40px', 'height': 130});
+            $(this).hide();
+            $('#registerform').show();
+            $('.signup').hide();
+            $('.name').hide();
+            $('.r-icon').animate({left: '-31%', top: '30px'});
+            $('.r-word').animate({left: '22%', top: '-20px'})
+        } else if ($(window).width() > 1652) {
+            $('.middle').show().addClass('animated fadeInUp');
+            $('.r-logo').animate({'margin-top': '30px', 'height': 160});
+            $(this).hide();
+            $('#registerform').show();
+            $('.signup').hide();
+            $('.name').hide();
+            $('.r-icon').animate({left: '-21%', top: '30px'});
+            $('.r-word').animate({left: '12%', top: '-51px'})
+        } else {
+            $('.middle').show().addClass('animated fadeInUp');
+            $('.r-logo').animate({'margin-top': '50px', 'height': 160});
+            $(this).hide();
+            $('#registerform').show();
+            $('.signup').hide();
+            $('.name').hide();
+            $('.r-icon').animate({left: '-40%', top: '30px'});
+            $('.r-word').animate({left: '25%', top: '-34px'});
+        }
+    });
+
+    $("#getCode").click(function (e) {
+        var mobile = $("#r_mobile").val();
+
+        $.ajax({
+            type: "GET",
+            url: serve + "/sendVerifyCode",
+            dataType: 'json',
+            data: {mobile: mobile},
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success: function (res) {
+                console.log(res);
+                if (res.code === 1) {
+                    layer.alert('验证码已经发送到手机');
+                }
+            },
+            error: function () {
+            }
+        });
+    });
+    $("#g_getCode").click(function (e) {
+        var mobile = $("#g_mobile").val();
+        $.ajax({
+            type: "GET",
+            url: serve + "/sendVerifyCode",
+            dataType: 'json',
+            data: {mobile: mobile},
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success: function (res) {
+                console.log(res);
+                if (res.code === 1) {
+                    layer.alert('验证码已经发送到手机');
+                }
+            },
+            error: function () {
+            }
+        });
+    });
+
+    $('#r_b-tn').click(function () {
+        /*var username = $("#r_username").val();
+        var mobile = $("#r_mobile").val();
+        var password = $("#r_password").val();
+        var conformPassword = $("#r_conformPassword").val();
+        var code = $("#r_code").val();
+        var temp = null;
+        if (username === "") {
+            layer.alert('用户名不能为空！');
+            return;
+        }
+        if (mobile === "") {
+            layer.alert('手机号不能为空！');
+            return;
+        }
+        if (conformPassword === "") {
+            layer.alert('密码不能为空！');
+            return;
+        }
+        if (password === "") {
+            layer.alert('密码不能为空！');
+            return;
+        }
+        if (code === "") {
+            layer.alert('验证码不能为空！');
+            return;
+        }
+        temp = {
+            username: username,
+            mobile: mobile,
+            password: password,
+            conformPassword: conformPassword,
+            code: code
+        };
+        $.ajax({
+            type: "POST",
+            url: serve + "/clientSignupPhone",
+            dataType: 'json',
+            data: temp,
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success: function (res) {
+                console.log(res);
+                if (res.code === 1) {
+                    layer.msg('成功', {icon: 1});
+                    $("#r_username").val('');
+                    $("#r_mobile").val('');
+                    $("#r_password").val('');
+                    $("#r_conformPassword").val('');
+                    $("#r_code").val('');
+                    localStorage.setItem('clientId', res.clientId);
+                    location.reload();
+                } else {
+                    layer.alert(res.err);
+                }
+            },
+            error: function () {
+            }
+        });*/
+        alert('请联系客服注册！')
+    });
+
+    $('#g_b-tn').click(function () {
+        var mobile = $("#g_mobile").val();
+        var password = $("#g_password").val();
+        var conformPassword = $("#g_conformPassword").val();
+        var code = $("#g_code").val();
+        var temp = null;
+        if (mobile === "" || mobile.length !== 11) {
+            layer.alert('手机号不正确！');
+            return;
+        }
+        if (conformPassword === "") {
+            layer.alert('密码不能为空！');
+            return;
+        }
+        if (password === "") {
+            layer.alert('密码不能为空！');
+            return;
+        }
+        if (code === "") {
+            layer.alert('验证码不能为空！');
+            return;
+        }
+        temp = {
+            mobile: mobile,
+            newPassword: password,
+            conformPassword: conformPassword,
+            code: code
+        };
+        $.ajax({
+            type: "POST",
+            url: serve + "/clientGetBackPassword",
+            dataType: 'json',
+            data: temp,
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success: function (res) {
+                console.log(res);
+                if (res.code === 1) {
+                    layer.msg('成功', {icon: 1});
+                    $("#g_mobile").val('');
+                    $("#g_password").val('');
+                    $("#g_conformPassword").val('');
+                    $("#g_code").val('');
+                    location.reload();
+                } else {
+                    layer.alert(res.err);
+                }
+            },
+            error: function () {
+            }
+        });
+    });
+
+    $("#b-tn_b").unbind('click').click(function (e) {
+        location.reload();
+    });
+    $("#r_b-tn_b").unbind('click').click(function (e) {
+        location.reload();
+    });
+    $("#g_b-tn_b").unbind('click').click(function (e) {
+        location.reload();
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>在线咨询</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0,
+    maximum-scale=1.0,
+    user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/im_tool.css">
+    <link rel="stylesheet" type="text/css" href="css/webuploader.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="s_header">
+            <div id="back_btn">
+                <span class="back_icon"></span>
+                <span class="back_text">返回</span>
+            </div>
+            <span class="header_title">欢迎咨询</span>
+        </div>
+        <div class="s_body">
+        </div>
+        <div class="s_ctrl">
+            <div class="s_toolbar" id='upload_input'>
+                <!-- <button id='s_input'></button> -->
+            </div>
+            <div class="s_input">
+                <textarea id="msg" placeholder="请输入聊天内容"></textarea>
+            </div>
+            <div class="s_send">
+                <button id="chat_btn" value="chat">发送</button>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/webuploader.custom.min.js"></script>
+        <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+        <script src="js/im_tool.js"></script>
+        <script src="js/chat.js"></script>
+    </div>
+    <script>
+    var clientHeight = document.body.clientHeight;
+    var _focusElem = null; //输入框焦点
+    //利用捕获事件监听输入框等focus动作
+    document.body.addEventListener("focus", function(e) {
+        _focusElem = e.target || e.srcElement;
+    }, true);
+    //因为存在软键盘显示而屏幕大小还没被改变，所以以窗体（屏幕显示）大小改变为准
+    window.addEventListener("resize", function() {
+        if (_focusElem && document.body.clientHeight < clientHeight) {
+            //焦点元素滚动到可视范围的底部(false为底部)
+            _focusElem.scrollIntoView(true);
+        }
+    });
+    </script>
+</body>
+
+</html>

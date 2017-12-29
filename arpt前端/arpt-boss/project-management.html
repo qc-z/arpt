@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ARPT总裁管理后台系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/mycss-change.css">
+    <link rel="stylesheet" href="css/4.css">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+</head>
+<body>
+<!--<span class="part1-shadow"></span>-->
+<div class="container-fluid">
+    <nav class="navbar navbar-inverse navbar-fixed-top animated" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:;">ARPT总裁管理系统</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="basic-message.html">基本信息</a></li>
+                    <li><a href="customer-list.html">客户列表</a></li>
+                    <li><a href="project-management.html">项目管理</a></li>
+                    <li><a href="data-manage.html">流量统计</a></li>
+                    <li><a href="tools.html">拓客工具</a></li>
+                    <li><a href="upload.html">广告图片管理</a></li>
+                    <li><a href="account-change.html">修改密码</a></li>
+                    <li><a href="#" class="s_signout">退出</a></li>
+                </ul>
+                <!--<form class="navbar-form navbar-right">-->
+                <!--<input type="text" class="form-control" placeholder="Search...">-->
+                <!--</form>-->
+            </div>
+        </div>
+    </nav>
+    <div class="nav-show">
+        <div class="nav-shadow"></div>
+        <div class=" col-sm-3 col-sm-offset-9 col-xs-5 col-xs-offset-7 nav-you">
+            <div class="logo">
+                <div class="col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 pic">
+
+                </div>
+            </div>
+            <ul class="nav-list ">
+                <li><a href="basic-message.html">基本信息</a></li>
+                <li><a href="customer-list.html">客户列表</a></li>
+                <li><a href="project-management.html">项目管理</a></li>
+                <li><a href="data-manage.html">流量统计</a></li>
+                <li><a href="tools.html">拓客工具</a></li>
+                <li><a href="upload.html" style="padding-left: 2rem;">广告图片管理</a></li>
+                <li><a href="account-change.html">修改密码</a></li>
+                <li><a href="#" class="s_signout">退出</a></li>
+                <li><span>2016-2017@ARPT v1.2.6</span></li>
+            </ul>
+            <!--<p>2016-2017@ARPT</p>-->
+            <!--<p>v1.0</p>-->
+        </div>
+    </div>
+
+    <div class="row project">
+
+
+        <div class="col-xs-10 col-xs-offset-1 part1 ">
+
+            <input type="text" placeholder="项目名称" class="txt" id="name">
+            <button class="btn1">请选择大类</button>
+            <input type="number" placeholder="价格" class="txt" id="price">
+            <button class="btn2 btn-add">点击添加</button>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 part2 part2-1 animated fadeInUp s_items" id="Mei_Chun" name="meichun">
+            <span class="title">美唇</span>
+            <!--<div class="mix">-->
+            <!--<button>丰唇</button>-->
+            <!--<span class="delect"></span>-->
+            <!--</div>-->
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 part2 animated fadeInUp s_items" id="Sou_Bi">
+            <span class="title">瘦鼻</span>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 part2 animated fadeInUp s_items" id="Shou_Lian" >
+            <span class="title">瘦脸</span>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 part2 animated fadeInUp s_items" id="Feng_TaiYangXue" >
+            <span class="title">太阳穴</span>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 part2 animated fadeInUp s_items" id="Mei_Mei" >
+            <span class="title">纹眉</span>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 part2 animated fadeInUp s_items" id="Feng_XiaBa" >
+            <span class="title">丰下巴</span>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 part2 animated fadeInUp s_items" id="Feng_Nie" >
+            <span class="title">丰颞</span>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 part2 animated fadeInUp s_items" id="Feng_PingGuoJi">
+            <span class="title">苹果肌</span>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 part2 animated fadeInUp s_items" id="Long_Bi" >
+            <span class="title">隆鼻</span>
+            <div class="form form1">
+            </div>
+        </div>
+        <div class="select">
+            <div class="container-fluid">
+                <div class="row">
+                    <span class="fenlei">请选择分类</span>
+                    <div class="col-xs-10 col-xs-offset-1 select-in">
+                        <button class="btn b1" value=1  name="meichun">美唇</button>
+                        <button class="btn b2" value=2 name="shoubi ">瘦鼻</button>
+                        <button class="btn b3" value=3 name="shoulian ">瘦脸</button>
+                        <button class="btn btn2 b4" value=4 name="taiyangxue ">太阳穴</button>
+                        <button class="btn btn2 b5" value=5 name="wenmei ">纹眉</button>
+                        <button class="btn btn2 b6" value=6 name="fengxiaba ">丰下巴</button>
+                        <button class="btn btn2 b7" value=7 name="fenge" >丰额</button>
+                        <button class="btn btn2 b8" value=8 name="pingguoji">苹果肌</button>
+                        <button class="btn btn2 b9" value=9 name="longbi">隆鼻</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="add"></div>
+
+
+        <script src="script/jquery.js"></script>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="script/bbmis.js"></script>
+        <script src="layer/layer.js"></script>
+        <script src="js/myjs.js"></script>
+
+    </div>
+</div>
+
+<script>
+    var params = {};
+
+    function init() {
+        //数据渲染到页面
+        $.ajax({
+            type: "GET",
+             url: serve + "/getProjectList",
+            //url: "http://10.0.0.143:4300/getProjectList",
+            dataType: 'json',
+            xhrFields: {
+                withCredentials: true
+            },
+            crossDomain: true,
+            success: function (res) {
+                var data = res.results;
+                var items = $('.s_items');
+                $('.mix').remove();
+                for (var i1 in data) {
+                    var t = $(items[i1]);
+                    for (var i2 in data[i1]) {
+                        t.append('<div class="mix"><button>' + data[i1][i2].projectName + '</button> <span class="delect" data-id="' + data[i1][i2]._id + '"></span></div>');
+                    }
+                }
+                $('.mix .delect').unbind('click').on("click", function () {
+                    var t = this;
+                    var id = $(this).attr('data-id');
+                    $.ajax({
+                        type: "GET",
+                         url: serve + "/deleteProject",
+                        //url: "http://http://10.0.0.143:4300/deleteProject",
+                        dataType: 'json',
+                        data: {projectId: id},
+                        xhrFields: {
+                            withCredentials: true
+                        },
+                        crossDomain: true,
+                        success: function (re) {
+                            console.log(re);
+                            if (re.code == 1) {
+                                init();
+                            }
+                        }
+                    });
+
+                })
+
+            },
+            error: function () {
+            }
+        });
+    }
+    $(function () {
+        init();
+        //请选择大类
+        (function () {
+            $('.project .part1 .btn1').click(function () {
+                $('.select').css({'display': 'block'}).removeClass('animated bounceOutRight').addClass('animated bounceInRight')
+            });
+            var num1 = 0;
+            $('.select button').click(function () {
+                $('.select').removeClass('animated bounceInRight').addClass('animated bounceOutRight');
+                params.projectType = $(this).val();
+				params.typeName = $(this).prop("name");
+                var word = $(this).html();
+                $('.project .part1 .btn1').html(word);
+                var num2 = $(this).index();
+                num1 = num2 + 1;
+            });
+
+            //添加项目
+            $('.project .part1 .btn2').click(function () {
+                if (num1 == 0) {
+                    $('.add').html('请选择大类').css({'display': 'block'}).hide().fadeIn(1000).fadeOut(1000)
+                } else {
+                    var add = $('#name').val();
+                    var price = $('#price').val();
+                    if (add == '') {
+                        $('.add').html('请输入要添加的项目').css({'display': 'block'}).hide().fadeIn(1000).fadeOut(1000)
+                    } else if (price == '') {
+                        $('.add').html('项目的价格').css({'display': 'block'}).hide().fadeIn(1000).fadeOut(1000)
+                    } else {
+                        $('.add').html('添加成功').css({'display': 'block'}).hide().fadeIn(1000).fadeOut(1000);
+                        params.projectName = add;
+                        params.projectPrice = price;
+                        params.clientId = localStorage.getItem('clientId');
+                        $.ajax({
+                            type: "POST",
+                            url: serve + "/addProject",
+                            dataType: 'json',
+                            data: params,
+                            xhrFields: {
+                                withCredentials: true
+                            },
+                            crossDomain: true,
+                            success: function (data) {
+                                console.log(data);
+                                init();
+                            },
+                            error: function () {
+                            }
+                        });
+                    }
+                }
+            })
+        })();
+        (function () {
+            $('.img').click(function () {
+                $('.image').show(0).removeClass('animated bounceOutRight').addClass('animated bounceInRight')
+            });
+            $('.image').click(function () {
+                $('.image').removeClass('animated bounceInRight').addClass('animated bounceOutRight')
+            })
+        })();
+    })
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

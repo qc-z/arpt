@@ -1,0 +1,153 @@
+/* index.html */
+body,body .conBg,#s_mobile{
+  background: #1A1E21;
+}
+.camera span{
+  background-image: url("../static/index/camera02.png");
+}
+.button button span{
+  background-image: url("../static/index/startTest02.png");
+  background-size: 100% 100%;
+}
+.symbol{
+  background-image: url("../static/index/explain02.png");
+}
+.explain_text{
+  color: #0A506E;
+}
+
+.span{
+  background-color: #2f2f2f;
+  color: #5FBBDC;
+}
+.ad{
+  border: 1px solid #5FBBDC;
+}
+.loading_pic span{
+  background-image: url("../static/mobile/mobile12.png");
+  background-color: transparent;
+}
+.loading_text span:nth-of-type(2){
+  color:#5FBBDC;
+}
+#preresult_text{
+  color:#ececec;
+}
+.code{
+  color:#ececec;
+}
+#preresult{
+  color: #5FBBDC;
+}
+.get_code{
+   /* Firefox 3.6+ */
+ background: -moz-linear-gradient(top, #20B2E6, #106084 0%, #20B2E6, #106084 100%, #20B2E6);
+ /* Safari 4-5, Chrome 1-9 */
+ background: -webkit-gradient(linear, top bottom, bottom top, from(#20B2E6), color-stop(0.05, #106084), color-stop(0, #20B2E6), color-stop(1, #106084), to(#20B2E6));
+ /* Safari 5.1+, Chrome 10+ */
+ background: -webkit-linear-gradient(top, #20B2E6, #106084 0%, #20B2E6, #106084 100%, #20B2E6);
+ /* Opera 11.10+ */
+ background: -o-linear-gradient(top, #20B2E6, #106084 0%, #20B2E6, #106084 100%, #20B2E6);
+}
+.code_mobile input,.code_code input{
+  background: transparent;
+}
+.sure button{
+  color: #333;
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #20B2E6, #106084 0%, #20B2E6, #106084 100%, #20B2E6);
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, top bottom, bottom top, from(#20B2E6), color-stop(0.05, #106084), color-stop(0, #20B2E6), color-stop(1, #106084), to(#20B2E6));
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #20B2E6, #106084 0%, #20B2E6, #106084 100%, #20B2E6);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #20B2E6, #106084 0%, #20B2E6, #106084 100%, #20B2E6);
+}
+
+/* report.html */
+.container-fluid{
+  background: #1A1E21;
+}
+.total{
+  background: #082A4D;
+}
+.total_title{
+  color: #65C8EB;
+}
+.total_skin_unselect{
+  background: #0E6D99;
+}
+.total_skin_select{
+  background: #66CAEE;
+}
+.color_title,.smooth_title,.pimple_title,.skin_title,.pore_title,.map_title{
+  color: #65C8EB;
+}
+.color_num span,.color_type_title{
+  color: #337C96;
+}
+#color_level{
+  background-image: url(../static/result/result23.png);
+}
+.pimple_text_selected{
+  color: #40849c;
+  border: 1px solid #40849c;
+}
+.smooth_symbol_name, .smooth_text, .skin_face_face, .skin_skin_title, .skin_text, .problem_title, .suggestion, #pimple_text_mid, #pimple_text_hig,.map_detail,#pimple_text_low{
+  color: #40849c;
+}
+.one,.two,.three,.four,.pore{
+  border-color: #66CAEE;
+}
+#pimple_level,#skin_level{
+  background: #158CB7;
+}
+#pimple_symbol{
+  background-image: url(../static/result/result34.png);
+}
+.smooth_symbol_level2{
+  background-image: url(../static/result/result45.png);
+}
+.smooth_symbol_level1{
+  background-image: url(../static/result/result55.png);
+}
+#skin_symbol{
+  background-image: url(../static/result/result23.png);
+}
+.result_button{
+  color: #333;
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #20B2E6, #106084 0%, #20B2E6, #106084 100%, #20B2E6);
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, top bottom, bottom top, from(#20B2E6), color-stop(0.05, #106084), color-stop(0, #20B2E6), color-stop(1, #106084), to(#20B2E6));
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #20B2E6, #106084 0%, #20B2E6, #106084 100%, #20B2E6);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #20B2E6, #106084 0%, #20B2E6, #106084 100%, #20B2E6);
+}
+.result_button span{
+  background-image: url("../static/im/skinChat2.png");
+}
+.map_body{
+  background: #1A1E21;
+}
+.footer span{
+  color:#65CAEF;
+}
+.footer hr{
+  border-color:#0B84B0;
+}
+.copy span{
+  color:#0B84B0;
+}
+.skin-chat{
+  background-image: url(../static/im/skinChat2.png);
+}
+.result_button_info{
+  background-color:#0B485D;
+  color: #fff;
+}
+.alert{
+  background-size: 30px;
+  background-image: url(../static/im/skinPrompt.png)
+}

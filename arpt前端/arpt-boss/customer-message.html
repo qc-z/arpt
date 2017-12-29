@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ARPT总裁管理后台系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/mycss-change.css">
+    <link rel="stylesheet" href="css/3.1.css">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+</head>
+
+<body>
+    <!--<span class="part1-shadow"></span>-->
+    <div class="container-fluid">
+        <nav class="navbar navbar-inverse navbar-fixed-top animated" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a type="button" href="customer-list.html" id="back"></a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="javascript:;">ARPT总裁管理系统</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="basic-message.html">基本信息</a></li>
+                        <li><a href="customer-list.html">客户列表</a></li>
+                        <li><a href="project-management.html">项目管理</a></li>
+                        <li><a href="data-manage.html">流量统计</a></li>
+                        <li><a href="tools.html">拓客工具</a></li>
+                        <li><a href="upload.html">广告图片管理</a></li>
+                        <li><a href="account-change.html">修改密码</a></li>
+                        <li><a href="#" class="s_signout">退出</a></li>
+                    </ul>
+                    <!--<form class="navbar-form navbar-right">-->
+                    <!--<input type="text" class="form-control" placeholder="Search...">-->
+                    <!--</form>-->
+                </div>
+            </div>
+        </nav>
+        <div class="nav-show">
+            <div class="nav-shadow"></div>
+            <div class=" col-sm-3 col-sm-offset-9 col-xs-5 col-xs-offset-7 nav-you">
+                <div class="logo">
+                    <div class="col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 pic">
+                    </div>
+                </div>
+                <ul class="nav-list ">
+                    <li><a href="basic-message.html">基本信息</a></li>
+                    <li><a href="customer-list.html">客户列表</a></li>
+                    <li><a href="project-management.html">项目管理</a></li>
+                    <li><a href="data-manage.html">流量统计</a></li>
+                    <li><a href="tools.html">拓客工具</a></li>
+                    <li><a href="upload.html" style="padding-left: 2rem;">广告图片管理</a></li>
+                    <li><a href="account-change.html">修改密码</a></li>
+                    <li><a href="#" class="s_signout">退出</a></li>
+                    <li><span>2016-2017@ARPT v1.2.6</span></li>
+                </ul>
+                <!--<p>2016-2017@ARPT</p>-->
+                <!--<p>v1.0</p>-->
+            </div>
+        </div>
+        <div class="row row1">
+            <div class="part1">
+                <div class="img"></div>
+                <div class="para">
+                    <p class="biaoti">客户电话 <span id="myphone"></span></p>
+                    <p>首次访问:<span id="first_visit">----</span></p>
+                    <p>最近访问:<span id="last_visit">----</span></p>
+                    <p>测试次数:<span id="visit_times">----</span></p>
+                </div>
+            </div>
+            <a class=" btn col-xs-4 col-xs-offset-1 phone" href="" id="phone">打电话给ta</a>
+            <!--<button class="col-xs-4 col-xs-offset-2 collect" id="collet">收藏</button>-->
+        </div>
+        <div class="row row2">
+            <div class="col-xs-8 col-xs-offset-2 result">测试结果</div>
+            <!-- 颜值 -->
+            <div class="part1 result1 face-con" id="testresult_face" style="display: none">
+                <div class="content">
+                    <div class="img2"></div>
+                    <div class="para">
+                        <p class="grade">
+                            <span class="g-l">总分:80分</span>
+                            <span class="g-r">测试日期:2017-2-8 18-23</span>
+                        </p>
+                        <span class="detail">轮廓：80分</span>
+                        <span class="detail">眉部：80分</span>
+                        <span class="detail">鼻部：80分</span>
+                        <span class="detail">相学：80分</span>
+                        <span class="detail">眼部：80分</span>
+                        <span class="detail">唇部：80分</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box01" id="outline">
+                        <p><span class="b_name">轮廓:</span><span id="out1">80</span>分</p>
+                        <p><span class="b_name">颧下颌宽度</span><span id="out2">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">三庭</span><span id="out3">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">五眼</span><span id="out4">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">面宽:中下面</span><span id="out5">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">面部对称性</span><span id="out6">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">颧:下颌:下巴</span><span id="out7">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">下巴</span><span id="out8">-XXX:80</span><span>分</span></p>
+                    </div>
+                    <div class="box01 box02" id="eyeScore">
+                        <p><span class="b_name">眼部:</span><span id="eye1">80</span>分</p>
+                        <p><span class="b_name">眼裂宽:高</span><span id="eye2">-XXX:80</span>分</p>
+                        <p><span class="b_name">眼宽:内眦间距</span><span id="eye3">-XXX:80</span>分</p>
+                        <p><span class="b_name">内眦角-外眦角</span><span id="eye4">-XXX:80</span>分</p>
+                        <p><span class="b_name">目面</span><span id="eye5">-XXX:80</span>分</p>
+                    </div>
+                    <div class="box01" id="noseScore">
+                        <p><span class="b_name">鼻部:</span><span id="nose1">80</span>分</p>
+                        <p><span class="b_name">鼻翼宽:鼻体宽</span><span id="nose2">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">鼻宽:面宽</span><span id="nose3">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">鼻长:面宽</span><span id="nose4">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">鼻</span><span id="nose5">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">鼻唇</span><span id="nose6">-XXX:80</span><span>分</span></p>
+                    </div>
+                    <div class="box01 box02" id="mouthScore">
+                        <p><span class="b_name">唇部:</span><span id="mouth1">80</span>分</p>
+                        <p><span class="b_name">口宽/颏高</span><span id="mouth2">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">口鼻/颏鼻</span><span id="mouth3">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">口宽/瞳距</span><span id="mouth4">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">口</span><span id="mouth5">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">唇目</span><span id="mouth6">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">唇</span><span id="mouth7">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">口唇水平角</span><span id="mouth8">-XXX:80</span><span>分</span></p>
+                    </div>
+                    <div class="box01" id="eyebrowScore">
+                        <p><span class="b_name">眉部:</span><span id="eyeb1">80</span>分</p>
+                        <p><span class="b_name">左眉鼻翼连线</span><span id="eyeb2">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">右眉鼻翼连线</span><span id="eyeb3">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">左眉尾眼外角</span><span id="eyeb4">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">右眉尾眼外角</span><span id="eyeb5">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">眉间距:鼻翼宽</span><span id="eyeb6">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">眉水平角</span><span id="eyeb7">-XXX:80</span><span>分</span></p>
+                    </div>
+                    <div class="box01 box02" id="kanXiangScore">
+                        <p><span class="b_name">相学:</span><span id="kan1">80</span>分</p>
+                        <p><span class="b_name">轮廓相学</span><span id="kan2">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">眉相学</span><span id="kan3">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">眼相学</span><span id="kan4">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">鼻相学</span><span id="kan5">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">口唇相学</span><span id="kan6">-XXX:80</span><span>分</span></p>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-xs-offset-4 open"><span class="openup">展开</span></div>
+            </div>
+            <!-- 皮肤 -->
+            <div class="part1 result1 skin-con" id="testresult_skin" style="display: none">
+                <div class="skin_content">
+                    <div class="img2"></div>
+                    <div class="skin_para">
+                        <div class="grade">
+                            <span class="skin_date">测试日期:2017-2-8 18-23</span>
+                            <span class="skin_score">总分:80分</span>
+                        </div>
+                        <span class="skin_detail">轮廓：80分</span>
+                        <span class="skin_detail">眉：80分</span>
+                        <span class="skin_detail">鼻：80分</span>
+                        <span class="skin_detail">相学：80分</span>
+                        <span class="skin_detail">毛孔：中</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 明星 -->
+            <div class="part1 result1 star-con" id="testresult_star" style="display: none">
+                <div class="content star-con">
+                    <div class="star-top">
+                        <div class="img2"></div>
+                        <span class="vs">VS</span>
+                        <div class="starImg"><div class="star-name"></div></div>
+                    </div>
+                    <div class="para">
+                        <p class="grade">
+                            <span class="g-l">相似度: </span>
+                            <span class="g-r star-gl">测试日期: </span>
+                        </p>
+                        <span class="detail">轮廓：80分</span>
+                        <span class="detail">眉部：80分</span>
+                        <span class="detail">鼻部：80分</span>
+                        <span class="detail">相学：80分</span>
+                        <span class="detail">眼部：80分</span>
+                        <!-- <span class="detail">唇部：80分</span> -->
+                    </div>
+                </div>
+                <div class="box star-box">
+                    <div class="box01" id="s_outline">
+                        <p><span class="b_name">轮廓:</span><span id="s_out1">80</span>分</p>
+                        <p><span class="b_name">颧下颌宽度</span><span id="s_out2">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">三庭</span><span id="s_out3">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">五眼</span><span id="s_out4">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">面宽:中下面</span><span id="s_out5">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">面部对称性</span><span id="s_out6">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">颧:下颌:下巴</span><span id="s_out7">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">下巴</span><span id="s_out8">-XXX:80</span><span>分</span></p>
+                    </div>
+                    <div class="box01 box02" id="s_eyeScore">
+                        <p><span class="b_name">眼部:</span><span id="s_eye1">80</span>分</p>
+                        <p><span class="b_name">眼裂宽:高</span><span id="s_eye2">-XXX:80</span>分</p>
+                        <p><span class="b_name">眼宽:内眦间距</span><span id="s_eye3">-XXX:80</span>分</p>
+                        <p><span class="b_name">内眦角-外眦角</span><span id="s_eye4">-XXX:80</span>分</p>
+                        <p><span class="b_name">目面</span><span id="s_eye5">-XXX:80</span>分</p>
+                    </div>
+                    <div class="box01" id="s_noseScore">
+                        <p><span class="b_name">鼻部:</span><span id="s_nose1">80</span>分</p>
+                        <p><span class="b_name">鼻翼宽:鼻体宽</span><span id="s_nose2">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">鼻宽:面宽</span><span id="s_nose3">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">鼻长:面宽</span><span id="s_nose4">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">鼻</span><span id="s_nose5">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">鼻唇</span><span id="s_nose6">-XXX:80</span><span>分</span></p>
+                    </div>
+                    <div class="box01 box02" id="s_mouthScore">
+                        <p><span class="b_name">唇部:</span><span id="s_mouth1">80</span>分</p>
+                        <p><span class="b_name">口宽/颏高</span><span id="s_mouth2">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">口鼻/颏鼻</span><span id="s_mouth3">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">口宽/瞳距</span><span id="s_mouth4">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">口</span><span id="s_mouth5">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">唇目</span><span id="s_mouth6">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">唇</span><span id="s_mouth7">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">口唇水平角</span><span id="s_mouth8">-XXX:80</span><span>分</span></p>
+                    </div>
+                    <div class="box01" id="s_eyebrowScore">
+                        <p><span class="b_name">眉部:</span><span id="s_eyeb1">80</span>分</p>
+                        <p><span class="b_name">左眉鼻翼连线</span><span id="s_eyeb2">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">右眉鼻翼连线</span><span id="s_eyeb3">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">左眉尾眼外角</span><span id="s_eyeb4">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">右眉尾眼外角</span><span id="s_eyeb5">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">眉间距:鼻翼宽</span><span id="s_eyeb6">-XXX:80</span><span>分</span></p>
+                        <p><span class="b_name">眉水平角</span><span id="s_eyeb7">-XXX:80</span><span>分</span></p>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-xs-offset-4 open star-open"><span class="openup">展开</span></div>
+            </div>
+        </div>
+        <div class="image">
+            <div class="turn"></div>
+            <div class="img-shadow"></div>
+        </div>
+    </div>
+    <script src="script/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="script/bbmis.js"></script>
+    <script src="layer/layer.js"></script>
+    <script src="js/myjs.js"></script>
+    <script>
+    $('#phone').attr("href", "tel:" + sessionStorage.getItem("mobile"));
+    //    $('#myphone').html("" + sessionStorage.getItem("mobile"));
+    $.ajax({
+        type: "GET",
+        url: serve + "/userGetInfo",
+        dataType: 'json',
+        data: {
+            uuid: getQueryStringByName('uuid'),
+            otherCondition: getQueryStringByName('otherCondition')
+        },
+        xhrFields: {
+            withCredentials: true
+        },
+        success: function(res) {
+            var data = res.result;
+            console.log(data);
+            var temp = $('.part1');
+			//图片兼容
+		    if( data.image_path.indexOf('aliyuncs.com') == -1 ){
+              temp.find('.img').css('background-image', 'url(' + serve + '/' + data.image_path + ')');
+            }else{
+             temp.find('.img').css('background-image', 'url(' + data.image_path + ')');
+           }
+            $('#first_visit').html(moment(data.meta.createdAt).format('YYYY-MM-DD'));
+            $('#last_visit').html(moment(data.meta.updatedAt).format('YYYY-MM-DD'));
+            $('#visit_times').html(data.testTimes);
+
+
+            if (getQueryStringByName('otherCondition') == 1) {
+                var testvalue = data.testValue;
+                console.log(data);
+                temp = $("#testresult_face");
+                temp.css('display', 'block');
+                temp.find('.g-l').html('总分:' + testvalue.totleScore + '分');
+                temp.find('.g-r').html('测试日期:' + moment(data.meta.updatedAt).format('YYYY-MM-DD'));
+
+                if( data.image_path.indexOf('aliyuncs.com') == -1 ){
+                    temp.find('.img2').css('background-image', 'url(' + serve + '/' + data.image_path + ')');
+                }else{
+                    temp.find('.img2').css('background-image', 'url(' + data.image_path + ')');
+                }
+
+
+                //temp.find('#phone').attr("href","tel:"+sessionStorage.getItem("mobile"));
+                var scores = temp.find('.detail');
+                scores.first().html('轮廓：' + testvalue.sTotle_Scores.outLineScore)
+                    .next().html('眼部：' + testvalue.sTotle_Scores.eyeScore)
+                    .next().html('鼻部：' + testvalue.sTotle_Scores.noseScore)
+                    .next().html('唇部：' + testvalue.sTotle_Scores.mouthScore)
+                    .next().html('眉部：' + testvalue.sTotle_Scores.eyebrowScore)
+                    .next().html('相学：' + testvalue.sTotle_Scores.kanXiangScore);
+                var scores_catalog = temp.find('.box01');
+
+                var temp1 = temp.find('#outline').first();
+                var temp2 = temp.find('#eyeScore').first();
+                var temp3 = temp.find('#noseScore').first();
+                var temp4 = temp.find('#mouthScore').first();
+                var temp5 = temp.find('#eyebrowScore').first();
+                var temp6 = temp.find('#kanXiangScore').first();
+
+                var score0 = testvalue.sTotle_Scores;
+                temp.find('#out1').html(score0.outLineScore);
+                temp.find('#eye1').html(score0.eyeScore);
+                temp.find('#nose1').html(score0.noseScore);
+                temp.find('#mouth1').html(score0.mouthScore);
+                temp.find('#eyeb1').html(score0.eyebrowScore);
+                temp.find('#kan1').html(score0.kanXiangScore);
+
+                var score1 = testvalue.sOutLine_Scores;
+                temp1.find('#out2').html(score1.delta_BBI);
+                temp1.find('#out3').html(score1.delta_TPR);
+                temp1.find('#out4').html(score1.delta_FER);
+                temp1.find('#out5').html(score1.delta_FWCMLH);
+                temp1.find('#out6').html(score1.delta_LBCRB);
+                temp1.find('#out7').html(score1.delta_BA);
+                temp1.find('#out8').html(score1.delta_CA);
+
+                var score2 = testvalue.sEye_Scores;
+                temp2.find('#eye2').html(score2.delta_EBWR);
+                temp2.find('#eye3').html(score2.delta_EBCIC);
+                temp2.find('#eye4').html(score2.delta_IACO);
+                temp2.find('#eye5').html(score2.delta_EFI);
+
+
+                var score3 = testvalue.sNose_Scores;
+                temp3.find('#nose2').html(score3.delta_NWWCB);
+                temp3.find('#nose3').html(score3.delta_NWCFW);
+                temp3.find('#nose4').html(score3.delta_NHCFW);
+                temp3.find('#nose5').html(score3.delta_NI);
+                temp3.find('#nose6').html(score3.delta_NMI);
+
+                var score4 = testvalue.sMouth_Scores;
+                temp4.find('#mouth2').html(score4.delta_MBCMC);
+                temp4.find('#mouth3').html(score4.delta_NMCNC);
+                temp4.find('#mouth4').html(score4.delta_MBCED);
+                temp4.find('#mouth5').html(score4.delta_MI);
+                temp4.find('#mouth6').html(score4.delta_LEI);
+                temp4.find('#mouth7').html(score4.delta_LI);
+                temp4.find('#mouth8').html(score4.delta_S);
+
+                var score5 = testvalue.sEyebrow_Scores;
+                temp5.find('#eyeb2').html(score5.delta_LENA);
+                temp5.find('#eyeb3').html(score5.delta_RENA);
+                temp5.find('#eyeb4').html(score5.delta_LEEN);
+                temp5.find('#eyeb5').html(score5.delta_REEN);
+                temp5.find('#eyeb6').html(score5.delta_ECND);
+                temp5.find('#eyeb7').html(score5.delta_EA);
+
+                var score6 = testvalue.sKanXiang_Scores;
+                temp6.find('#kan2').html(score6.outLine);
+                temp6.find('#kan3').html(score6.eyebrow);
+                temp6.find('#kan4').html(score6.eye);
+                temp6.find('#kan5').html(score6.nose);
+                temp6.find('#kan6').html(score6.mouth);
+
+                //                    var outLineScore = scores_catalog.first();
+                //                    outLineScore.append('<p><span>-面宽:131.92478</span><span>mm</span></p>');
+                //                    var eyeScore = outLineScore.next();
+                //                    var outLineScores = eyeScore.next();
+                //                    var outLineScores = scores_catalog.first();
+                //
+                //                    testresult.after(temp);
+                //                    testresult.remove();
+
+                $('.openup').click(function() {
+                    if ($(this).html() == '展开') {
+                        $(this).parent('.open').siblings('.box').slideDown(500);
+                        $(this).html('折叠')
+                    } else {
+                        $(this).parent('.open').siblings('.box').slideUp(500);
+                        $(this).html('展开')
+                    }
+                })
+            } else if (getQueryStringByName('otherCondition') == 2) {
+                temp = $("#testresult_skin");
+                temp.css('display', 'block');
+                console.log(data)
+                var result = {
+                    COLOR_FLAG: data.color_flag[0],
+                    INFLAMMATION_FLAG: data.inflammation_flag[0],
+                    OIL_FLAG: Math.round(data.oil_flag[0] * 100),
+                    PROSE_FLAG: data.prose_flag[0],
+                    WATER_FLAG: Math.round(data.water_flag[0] * 100),
+                    WRINKLES_FLAG: data.wrinkles_flag
+                };
+
+                var inflammation = 0;
+                var smoothy = 0;
+                var prose = 0;
+                var hasWrinkle = false;
+                var skintype = null;
+
+                if( data.image_path.indexOf('aliyuncs.com') == -1 ){
+                    temp.find('.img2').css('background-image', 'url(' + serve + '/' + data.image_path + ')');
+                }else{
+                    temp.find('.img2').css('background-image', 'url(' + data.image_path + ')');
+                }
+
+                // 判断炎症严重程度
+                if (result.INFLAMMATION_FLAG == '较轻') {
+                    // inflammation = 100;
+                    inflammation = 80;
+                } else if (result.INFLAMMATION_FLAG == '中等') {
+                    inflammation = 70;
+                    // inflammation = 80;
+                } else if (result.INFLAMMATION_FLAG == '重') {
+                    // inflammation = 40;
+                    inflammation = 50;
+                } else if (result.INFLAMMATION_FLAG == '严重') {
+                    inflammation = 20;
+                } else if(result.INFLAMMATION_FLAG == "无" || result.INFLAMMATION_FLAG == "" || !result.INFLAMMATION_FLAG){
+                    inflammation = 100;
+                }else if(result.INFLAMMATION_FLAG == '非常严重'){
+                    inflammation = 0;
+                }
+                // 判断皮肤光滑程度
+                if (!!result.PROSE_FLAG) {
+                    if (result.PROSE_FLAG == "小")
+                        prose = 100;
+                    else if (result.PROSE_FLAG == "较小")
+                        prose = 80;
+                    else if (result.PROSE_FLAG == "大")
+                        prose = 50;
+                    else if (result.PROSE_FLAG == "粗大")
+                        prose = 20;
+                }
+                var water = (100-Math.round(Math.abs(result.WATER_FLAG - .6).toFixed(2)*3*100))*0.4+60
+                var smoothy = 0.35 *inflammation  + 0.35 * prose + 0.1 * water + 0.2 * (100-parseInt(result.COLOR_FLAG));
+
+                // var smoothy = 0.35 * inflammation + 0.35 * prose + 0.1 * result.WATER_FLAG + 0.2 * result.COLOR_FLAG;
+
+                for (var i = 1; i < result.WRINKLES_FLAG.length; i++) {
+                    if (!!result.WRINKLES_FLAG[i]) {
+                        hasWrinkle = true;
+                    }
+                }
+
+                /*if (water <75 && inflammation > 75 && prose > 80 ){
+                    skintype = "干性皮肤";
+                }
+                else if (result.OIL_FLAG>=0.17) {
+                    skintype = "油性皮肤";
+                }else{
+                    skintype = "混合性皮肤";
+                }*/
+                if (inflammation < 60){
+                    inflammation_level = 3;
+                }
+
+                if (inflammation > 80 && prose > 50 && !hasWrinkle) {
+                    skintype = "干性皮肤";
+                } else if (inflammation < 40 && prose <= 50) {
+                    skintype = "油性皮肤";
+                } else {
+                    skintype = "混合性皮肤";
+                }
+
+                $('.skin_score')[0].innerText = '您的皮肤属于：' + skintype;
+                $('.skin_detail')[0].innerText = '油份：' + result.OIL_FLAG;
+                $('.skin_detail')[1].innerText = '水分：' + result.WATER_FLAG;
+                $('.skin_detail')[2].innerText = '肤色：' + result.COLOR_FLAG;
+                $('.skin_detail')[3].innerText = '炎症：' + result.INFLAMMATION_FLAG;
+                $('.skin_detail')[4].innerText = '毛孔：中';
+
+                temp.find('.skin_date').html('测试日期:' + moment(data.meta.updatedAt).format('YYYY-MM-DD'));
+
+            } else {
+                var testvalue = data.faceTest.TestValue;
+
+                temp = $("#testresult_star");
+                temp.css('display', 'block');
+                temp.find('.g-l').html('相似度:' + data.search.confidence.toFixed() + '%');
+                temp.find('.g-r').html('测试日期:' + moment(data.meta.updatedAt).format('YYYY-MM-DD'));
+
+                //客户照片
+                if( data.image_path.indexOf('aliyuncs.com') == -1 ){
+                    temp.find('.img2').css('background-image', 'url(' + serve + '/' + data.image_path + ')');
+                }else{
+                    temp.find('.img2').css('background-image', 'url(' + data.image_path + ')');
+                }
+                //明星照片
+                temp.find('.starImg').css('background-image', 'url(' + data.starInfo.picture + ')');
+                $('.star-name').html(data.starInfo.name);
+
+                var scores = temp.find('.detail');
+                scores.first().html('轮廓：' + testvalue.sTotle_Scores.outLineScore)
+                    .next().html('眼部：' + testvalue.sTotle_Scores.eyeScore)
+                    .next().html('鼻部：' + testvalue.sTotle_Scores.noseScore)
+                    .next().html('唇部：' + testvalue.sTotle_Scores.mouthScore)
+                    .next().html('眉部：' + testvalue.sTotle_Scores.eyebrowScore)
+                    // .next().html('相学：' + testvalue.sTotle_Scores.kanXiangScore);
+                var scores_catalog = temp.find('.box01');
+
+                var temp1 = temp.find('#s_outline').first();
+                var temp2 = temp.find('#s_eyeScore').first();
+                var temp3 = temp.find('#s_noseScore').first();
+                var temp4 = temp.find('#s_mouthScore').first();
+                var temp5 = temp.find('#s_eyebrowScore').first();
+                var temp6 = temp.find('#s_kanXiangScore').first();
+
+                var score0 = testvalue.sTotle_Scores;
+                temp.find('#s_out1').html(score0.outLineScore);
+                temp.find('#s_eye1').html(score0.eyeScore);
+                temp.find('#s_nose1').html(score0.noseScore);
+                temp.find('#s_mouth1').html(score0.mouthScore);
+                temp.find('#s_eyeb1').html(score0.eyebrowScore);
+                temp.find('#s_kan1').html(score0.kanXiangScore);
+
+                var score1 = testvalue.sOutLine_Scores;
+                temp1.find('#s_out2').html(score1.delta_BBI);
+                temp1.find('#s_out3').html(score1.delta_TPR);
+                temp1.find('#s_out4').html(score1.delta_FER);
+                temp1.find('#s_out5').html(score1.delta_FWCMLH);
+                temp1.find('#s_out6').html(score1.delta_LBCRB);
+                temp1.find('#s_out7').html(score1.delta_BA);
+                temp1.find('#s_out8').html(score1.delta_CA);
+
+                var score2 = testvalue.sEye_Scores;
+                temp2.find('#s_eye2').html(score2.delta_EBWR);
+                temp2.find('#s_eye3').html(score2.delta_EBCIC);
+                temp2.find('#s_eye4').html(score2.delta_IACO);
+                temp2.find('#s_eye5').html(score2.delta_EFI);
+
+
+                var score3 = testvalue.sNose_Scores;
+                temp3.find('#s_nose2').html(score3.delta_NWWCB);
+                temp3.find('#s_nose3').html(score3.delta_NWCFW);
+                temp3.find('#s_nose4').html(score3.delta_NHCFW);
+                temp3.find('#s_nose5').html(score3.delta_NI);
+                temp3.find('#s_nose6').html(score3.delta_NMI);
+
+                var score4 = testvalue.sMouth_Scores;
+                temp4.find('#s_mouth2').html(score4.delta_MBCMC);
+                temp4.find('#s_mouth3').html(score4.delta_NMCNC);
+                temp4.find('#s_mouth4').html(score4.delta_MBCED);
+                temp4.find('#s_mouth5').html(score4.delta_MI);
+                temp4.find('#s_mouth6').html(score4.delta_LEI);
+                temp4.find('#s_mouth7').html(score4.delta_LI);
+                temp4.find('#s_mouth8').html(score4.delta_S);
+
+                var score5 = testvalue.sEyebrow_Scores;
+                temp5.find('#s_eyeb2').html(score5.delta_LENA);
+                temp5.find('#s_eyeb3').html(score5.delta_RENA);
+                temp5.find('#s_eyeb4').html(score5.delta_LEEN);
+                temp5.find('#s_eyeb5').html(score5.delta_REEN);
+                temp5.find('#s_eyeb6').html(score5.delta_ECND);
+                temp5.find('#s_eyeb7').html(score5.delta_EA);
+
+                $('.openup').click(function() {
+                    if ($(this).html() == '展开') {
+                        $(this).parent('.open').siblings('.box').slideDown(500);
+                        $(this).html('折叠')
+                    } else {
+                        $(this).parent('.open').siblings('.box').slideUp(500);
+                        $(this).html('展开')
+                    }
+                })
+            }
+
+
+        },
+        error: function() {}
+    });
+
+
+    //    req('getFavour', {uuid: getQueryStringByName('uuid')}, function (data) {
+    //        var favour1 = data.favour;
+    //        var uuid2 = getQueryStringByName('uuid')
+    //        if (favour1 == 1) {
+    //            $('#collet').html('已收藏');
+    //            $('.collect').css({background: 'linear-gradient(90deg,#F12C43 ,#EB34A1  )'})
+    //        } else {
+    //            $('#collet').html('收藏');
+    //            $('.collect').css({background: '#26252A'})
+    //
+    //        }
+    //        $('#collet').click(function () {
+    //            if (favour1 == 1) {
+    //                $('#collet').html('收藏');
+    //                layer.alert('你已取消收藏');
+    //                $('.collect').css({background: '#26252A'})
+    //                req('toggleFavour', {uuid: uuid2, favour: 0}, function (result) {
+    //                });
+    //            } else {
+    //                $('#collet').html('已收藏');
+    //                layer.alert('你已添加收藏');
+    //                $('.collect').css({background: 'linear-gradient(90deg,#F12C43 ,#EB34A1  )'})
+    //
+    //                req('toggleFavour', {uuid: uuid2, favour: 1}, function (result) {
+    //                });
+    //            }
+    //
+    //        })
+    //
+    //    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+/*   try   */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style: none;
+}
+
+body {
+    background: #F5F5F7;
+    font-family: "微软雅黑";
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.r-logo {
+    background-image: url("../images/u206.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    height: 180px;
+    margin-top: 160px;
+}
+
+.form-group {
+    margin-bottom: -11px;
+}
+
+.middle {
+    height: 269px;
+    margin-top: 36px;
+    box-shadow: 0 3px 20px 1px #DFDFDF;
+    background: #ffffff;
+    border-radius: 12px;
+    color: #180623;
+    display: none;
+}
+
+.middle p {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.middle span {
+    color: #666;
+
+}
+
+.middle .p1 {
+    margin-top: 60px;
+
+}
+
+.middle .txt {
+    margin-left: 30px;
+}
+
+.form-horizontal {
+    margin-top: 32px;
+}
+
+.b-tn {
+    background: linear-gradient(90deg, #F12C43, #EB34A1);
+    margin-top: 84px;
+    border-radius: 36px;
+    font-size: 1em;
+    height: 47px;
+    box-shadow: 0 2px 8px 1px #ccc;
+    color: #fff;
+    font-weight: bold;
+    width: 40%;
+    margin-left: 30%;
+
+}
+
+.col-md-6 > input:focus {
+    box-shadow: none;
+    border-color: #EF2F61;
+    color: #EF2F61;
+
+}
+
+.b-tn::-webkit-input-placeholder {
+    color: #f72109;
+}
+
+.b-tn::-moz-placeholder {
+    color: #f72109;
+}
+
+.b-tn::-ms-placeholder {
+    color: #f72109;
+}
+
+.first {
+    margin-top: 20px;
+}
+
+.first .col-md-6 > input {
+    background-image: url("../images/account.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px;
+    padding-left: 27%;
+    width: 20px;
+}
+
+.second .col-md-6 > input {
+    background-image: url("../images/password.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 25px 25px;
+    padding-left: 27%;
+}
+
+.second {
+    margin-top: 42px;
+}
+
+.nav li a {
+    cursor: pointer;
+}
+
+.col-md-6 > input {
+    text-align: center;
+    color: #ccc;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    box-shadow: none;
+    text-align: left;
+    border-radius: 0;
+    padding: 0;
+    line-height: 50px;
+    font-size: 15px;
+    height: 50px;
+}
+
+.col-md-6 label {
+    color: #666;
+    font-size: 18px;
+}
+
+.nav-show {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: none;
+}
+
+.nav-shadow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2001;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.nav-you {
+    background: #330033;
+    height: 100%;
+    padding: 0;
+    z-index: 2002;
+}
+
+.nav-in {
+    height: 100%;
+}
+
+.nav-list li {
+    background: #fff;
+    border-radius: 12px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 40px;
+}
+
+.nav-list li:nth-of-type(1) {
+    margin-top: 50px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #000;
+
+}
+
+.logo {
+    width: 100%;
+    height: 120px;
+    background: #E4E4E4;
+    box-shadow: 0 2px 1px black;
+}
+
+.pic {
+    background: url("../images/u206.png") no-repeat left top;
+    height: 80px;
+    background-size: contain;
+    margin-top: 20px;
+    -webkit-animation: float 2s infinite;
+    -o-animation: float 2s infinite;
+    animation: float 2s infinite;
+}
+
+@-moz-keyframes {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.3)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+.nav-you p {
+    color: #fff;
+    text-align: center;
+    color: #999;
+}
+
+.nav-you p:nth-of-type(1) {
+    margin-top: 530px;
+}
+
+.navbar-header {
+    text-align: center;
+}
+
+.navbar-brand {
+    float: none;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    text-shadow: 0 0 2px blue;
+}
+
+html, body {
+    height: 100%;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+    font-size: 21px;
+    margin-left: 12%;
+    letter-spacing: 2px;
+}
+
+.hahaha {
+    display: none;
+}
+
+@media screen and (max-width: 330px) {
+    .navbar-inverse .navbar-brand {
+        margin-left: 5%;
+    }
+
+    .part2 {
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+
+    .part2 p {
+        line-height: 50px;
+        font-size: 13px;
+    }
+
+    .part2 p .hl {
+        font-size: 13px;
+    }
+
+    .nav-list li a {
+        font-size: 12px;
+    }
+
+    .add {
+        top: 291px;
+    }
+
+    .r-logo {
+        margin-top: 90px;
+    }
+
+    .logo {
+        height: 91px;
+    }
+}
+
+.signup {
+    background: linear-gradient(90deg, #F12C43, #EB34A1);
+    margin-top: 154px;
+    border-radius: 36px;
+    font-size: 1em;
+    height: 47px;
+    box-shadow: 0 2px 8px 1px #ccc;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.name {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+}
+
+.navbar-inverse {
+    border: none;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+

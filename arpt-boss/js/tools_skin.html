@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ARPT总裁管理后台系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/mycss-change.css">
+    <link rel="stylesheet" href="css/2.css">
+    <link rel="stylesheet" href="css/tools_face.css">
+</head>
+<body>
+
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<!--<span class="part1-shadow"></span>-->
+
+<div class="container-fluid">
+    <nav class="navbar navbar-inverse navbar-fixed-top animated" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:;">ARPT总裁管理系统</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="basic-message.html">基本信息</a></li>
+                    <li><a href="customer-list.html">客户列表</a></li>
+                    <li><a href="project-management.html">项目管理</a></li>
+                    <li><a href="data-manage.html">流量统计</a></li>
+                    <li><a href="tools.html">拓客工具</a></li>
+                    <li><a href="account-change.html">修改密码</a></li>
+                    <li><a href="#" class="s_signout">退出</a></li>
+                </ul>
+                <!--<form class="navbar-form navbar-right">-->
+                <!--<input type="text" class="form-control" placeholder="Search...">-->
+                <!--</form>-->
+            </div>
+        </div>
+    </nav>
+    <div class="nav-show">
+        <div class="nav-shadow"></div>
+        <div class=" col-sm-3 col-sm-offset-9 col-xs-5 col-xs-offset-7 nav-you">
+            <div class="logo">
+                <div class="col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 pic">
+
+                </div>
+            </div>
+            <ul class="nav-list ">
+                <li><a href="basic-message.html">基本信息</a></li>
+                <li><a href="customer-list.html">客户列表</a></li>
+                <li><a href="project-management.html">项目管理</a></li>
+                <li><a href="data-manage.html">流量统计</a></li>
+                <li><a href="tools.html">拓客工具</a></li>
+                <li><a href="account-change.html">修改密码</a></li>
+                <li><a href="#" class="s_signout">退出</a></li>
+                <li><span>2016-2017@ARPT v1.0</span></li>
+            </ul>
+            <!--<p>2016-2017@ARPT</p>-->
+            <!--<p>v1.0</p>-->
+        </div>
+    </div>
+
+
+    <div class="row s_head">
+        <div class="col-xs-5">
+            <img src="./imgs/tools_09.jpg"/>
+        </div>
+        <div class="col-xs-7 ">
+            <div class="row">
+                <span class="s_head_detail_name">在线皮肤测试</span>
+            </div>
+            <div class="row">
+                <span class="s_head_detail_ver">版本1.5</span>
+            </div>
+            <div class="row">
+                <span class="s_head_detail_val">2999.00/年</span>
+            </div>
+        </div>
+    </div>
+    <div class="row s_title">
+        <span class="col-xs-4">开通状况</span>
+        <span class="col-xs-4" id="s_title_status">未开通</span>
+        <span class="col-xs-4" id="s_title_btn">马上开通</span>
+    </div>
+
+    <div class="row s_url">
+        <div class="row s_url_name">
+            <span class="col-xs-6">获取工具链接</span>
+        </div>
+        <div class="row s_url_url">
+            <span id="s_url_url"></span>
+        </div>
+        <div class="row s_url_btn">
+            <span class="col-xs-5" id="s_copy">复制链接到粘贴板</span>
+            <a class="col-xs-4" id="s_a">直接访问</a>
+        </div>
+    </div>
+    <div class="row s_qrCode_title">
+        <span class="col-xs-6">扫二维码访问</span>
+    </div>
+    <div class="row s_qrCode_img">
+        <div class="col-xs-7" id="s_qrCode">
+            <!--<img src="./imgs/tool_face_07.png"/>-->
+        </div>
+    </div>
+</div>
+<script src="./script/jquery.js"></script>
+<script src="http://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./script/bbmis.js"></script>
+<script src="layer/layer.js"></script>
+<script src="./js/myjs.js"></script>
+<script src="./js/tools_face.js"></script>
+<script>
+
+</script>
+</body>
+</html>
+
+
+
+

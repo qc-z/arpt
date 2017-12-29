@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>ARPT总裁管理后台系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss-change.css">
+    <link rel="stylesheet" href="css/3.css">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row cus">
+        <input class="col-xs-10 col-xs-offset-1 part1 tel" placeholder="输入手机号码" id="inputmobile">
+        <div class="col-xs-10 col-xs-offset-1 part1-1">
+            <button class="btn1 change all-cus" onclick="getUsers('all')">全部客户</button>
+            <button class="btn2 change" onclick="getUsers('yesterday')">昨天客户</button>
+            <button class="btn3 change search">查询手机号</button>
+        </div>
+        <div id="users">
+            <div id="user" class="col-xs-10 col-xs-offset-1 part2 animated fadeInUp">
+                <span id="photo" class="photo"></span>
+                <span id="name" class="name"></span>
+                <span id="mobile" class="number"></span>
+                <span class="check"><a id="view" href="">查看</a></span>
+            </div>
+        </div>
+
+
+        <div id="test1" style="text-align: center;" pagination="pagination_new" pagenumber="1" totalpage="5"></div>
+        <!--<hr >
+        <div id="test2" style="text-align: center;" pagination="pagination_new" pagenumber="14" totalpage="15" ></div>
+        <hr >
+        <div id="test3" style="text-align: center;" pagination="pagination_new" pagenumber="1" totalpage="1" onlyOnePageIsShow="false"></div>
+        <hr >
+        <div id="test4" style="text-align: center;" pagination="pagination_new" pagenumber="1" totalpage="1" ></div>
+        <hr >
+        <div id="test5" style="text-align: center;" pagination="pagination_new" pagenumber="10" totalpage="15" paginationMaxLength="5" onlyOnePageIsShow="false"></div>
+        <hr/>-->
+        <button id="btn1">手动刷新指定分页条</button>
+        <button id="btn2">手动刷新全部分页条</button>
+    </div>
+</div>
+
+<script src="script/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/pagination.js"></script>
+<script src="script/bbmis.js"></script>
+<script>
+    function paginationClick(pagination_id) {
+        var pagenumber = $('#' + pagination_id + '').attr('pagenumber');
+        var totalpage = $('#' + pagination_id + '').attr('totalpage');
+        alert('zmy通用分页测试：当前id：' + pagination_id + ' , pagenumber:' + pagenumber + ' , totalpage:' + totalpage);
+    }
+
+
+    /*    $(function(){
+     $('#btn1').click(function(){
+     $('#test3').attr('pagenumber','2');
+     $('#test3').attr('totalpage','4');
+     initPagination($('#test3'));
+     });
+     $('#btn2').bind('click',function(){
+     $('#test3').attr('pagenumber','2');
+     $('#test3').attr('totalpage','4');
+
+     $('#test1').attr('pagenumber','7');
+     $('#test1').attr('totalpage','10');
+     $('#test1').attr('paginationMaxLength','6');
+     paginationInit();
+     });
+     });*/
+</script>
+<script>
+
+</script>
+</body>
+</html>
